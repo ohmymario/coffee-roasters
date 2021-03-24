@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { GlobalStyles } from './PageStyles';
+import Header from '../header/Header';
 
 const InnerStyles = styled.div`
   max-width: var(--maxWidth);
@@ -12,7 +13,10 @@ const Page = props => {
   return (
     <>
       <GlobalStyles />
-      <InnerStyles>{children}</InnerStyles>
+      <InnerStyles>
+        <Header />
+        {children}
+      </InnerStyles>
     </>
   );
 };
