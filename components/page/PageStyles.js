@@ -5,8 +5,6 @@ const GlobalStyles = createGlobalStyle`
 
   ${normalize}
 
-  @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:wght@900&display=swap');
-
   html {
     --lightCyan: #66D2CF;
     --darkCyan: #0E8784;
