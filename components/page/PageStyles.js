@@ -63,9 +63,13 @@ const GlobalStyles = createGlobalStyle`
     color: var(--grey);
   }
 
+  ul {
+    list-style: none;
+  }
+
   a {
     text-decoration: none;
-    color: var(--lightCreamBG);
+    color: var(--grey);
     &:hover {
       text-decoration: underline;
     }
