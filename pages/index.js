@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Hero from '../components/hero/Hero';
+import Collection from '../components/collection/Collection';
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <button type="button">Button</button> */}
 
         <Hero />
+        <Collection />
       </main>
     </div>
   );
