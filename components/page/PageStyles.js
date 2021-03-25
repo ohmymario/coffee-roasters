@@ -27,7 +27,8 @@ const GlobalStyles = createGlobalStyle`
 
   h1, h2, h3, h4 {
     font-family: 'Fraunces', serif;
-    color: var(--darkGreyBlue)
+    color: var(--darkGreyBlue);
+    margin: 0;
   }
 
   h1 {
@@ -75,16 +76,20 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
+  p {
+    margin: 0;
+  }
+
   button {
     font-family: 'Fraunces', serif;
     font-size: 1.125rem;
     color: var(--lightCreamBG);
     background: var(--darkCyan);
     border: none;
-    padding: 15px 0;
+    padding: 17px 0;
     width: 220px;
     border-radius: 3px;
-    margin: 5px;
+    margin: 5px 0;
     &:hover {
       background: var(--lightCyan)
     }
