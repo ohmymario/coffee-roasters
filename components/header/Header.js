@@ -8,7 +8,7 @@ const Header = () => (
     <Image
       src="/images/logo.svg"
       layout="fixed"
-      alt="Picture of the author"
+      alt="logo"
       width={237}
       height={27}
     />
