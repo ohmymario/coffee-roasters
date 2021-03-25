@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Hero from '../components/hero/Hero';
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>Testing h1</h1>
+        {/* <h1>Testing h1</h1>
         <h2>Testing h2</h2>
         <h3>Testing h3</h3>
         <h4>Testing h4</h4>
@@ -18,7 +19,9 @@ export default function Home() {
         <button type="button" disabled>
           Button
         </button>
-        <button type="button">Button</button>
+        <button type="button">Button</button> */}
+
+        <Hero />
       </main>
     </div>
   );
