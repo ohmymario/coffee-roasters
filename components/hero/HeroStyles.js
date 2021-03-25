@@ -6,6 +6,7 @@ const HeroStyles = styled.div`
   position: relative;
   display: flex;
   align-items: center;
+  margin-bottom: 8.5rem;
 
   .hero-image {
     border-radius: 10px;
