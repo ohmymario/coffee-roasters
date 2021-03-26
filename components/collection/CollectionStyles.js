@@ -6,8 +6,8 @@ const CollectionStyles = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 12.5rem;
+  /* TODO: NEEDS MARGIN READJUSTED */
 
-  /* FOR FUTURE TEXT */
   .collection-lg-title {
     font-family: 'Fraunces', serif;
     text-align: center;
