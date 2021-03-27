@@ -1,39 +1,30 @@
 // 454 x 356
-export const collectionData = [
+export const WhyUsData = [
   {
-    width: 234,
-    height: 177,
-    src: '/images/coffee/image-gran-espresso.png',
-    alt: 'Gran Espresso Coffee',
-    name: 'Gran Espresso',
-    desc:
-      'Light and flavorful blend with cocoa and black pepper for an intense experience.',
+    width: 72,
+    height: 72,
+    src: '/images/icons/icon-coffee-bean.svg',
+    alt: null,
+    title: 'Best Quality',
+    subtext:
+      'Discover an endless variety of the world’s best artisan coffee from each of our roasters.',
   },
   {
-    width: 234,
-    height: 177,
-    src: '/images/coffee/image-planalto.png',
-    alt: 'Planalto Coffee',
-    name: 'Planalto',
-    desc:
-      'Brazilian dark roast with rich and velvety body, and hints of fruits and nuts.',
+    width: 72,
+    height: 72,
+    src: '/images/icons/icon-gift.svg',
+    alt: null,
+    title: 'Exclusive benefits',
+    subtext:
+      'Special offers and swag when you subscribe, including 30% off your first shipment.',
   },
   {
-    width: 234,
-    height: 177,
-    src: '/images/coffee/image-Piccollo.png',
-    alt: 'Piccollo Coffee',
-    name: 'Piccollo',
-    desc:
-      'Mild and smooth blend featuring notes of toasted almond and dried cherry.',
-  },
-  {
-    width: 234,
-    height: 177,
-    src: '/images/coffee/image-danche.png',
-    alt: 'Danche Coffee',
-    name: 'Danche',
-    desc:
-      'Ethiopian hand-harvested blend densely packed with vibrant fruit notes.',
+    width: 72,
+    height: 72,
+    src: '/images/icons/icon-truck.svg',
+    alt: null,
+    title: 'Free shipping',
+    subtext:
+      'We cover the cost and coffee is delivered fast. Peak freshness: guaranteed.',
   },
 ];
