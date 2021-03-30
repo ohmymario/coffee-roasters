@@ -20,7 +20,7 @@ export const WhyUsData = [
   },
   {
     width: 72,
-    height: 72,
+    height: 50,
     src: '/images/icons/icon-truck.svg',
     alt: null,
     title: 'Free shipping',
