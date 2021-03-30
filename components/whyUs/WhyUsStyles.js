@@ -26,6 +26,7 @@ const WhyUsStyles = styled.div`
   .whyus-cards {
     /* drop cards down out of the container */
     display: flex;
+    transform: translateY(70px);
     .whyus-card {
       background: var(--darkCyan);
       color: var(--lightCreamBG);
