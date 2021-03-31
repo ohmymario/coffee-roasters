@@ -11,6 +11,7 @@ const WhyUs = () => {
   console.log('Why choose us component');
   return (
     <WhyUsStyles>
+      <div className="whyus-background" />
       <div className="whyus-text">
         <h2>Why choose us?</h2>
         <p>

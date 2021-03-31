@@ -6,8 +6,21 @@ const WhyUsStyles = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-radius: 10px;
+
   padding: 100px 70px 0 70px;
+
+  position: relative;
+
+  .whyus-background {
+    position: absolute;
+    width: 100%;
+    height: 577px;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    background: #2c343e;
+    z-index: -1;
+  }
 
   .whyus-text {
     width: 540px;
