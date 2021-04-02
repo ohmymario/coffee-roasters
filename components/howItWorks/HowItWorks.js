@@ -1,15 +1,19 @@
 import React from 'react';
 import HowItWorksStyles from './HowItWorksStyles';
+import { HowItWorksData } from './HowItWorksData';
+import HowItWorksCard from '../howItWorksCard/HowItWorksCard';
 
 const HowItWorks = () => (
   <HowItWorksStyles>
     <h4>How it works</h4>
-    <div className="divider">
-      <div className="dot" />
+
+    <div className="cards-container">
+      {HowItWorksData.map((item, i) => (
+        <HowItWorksCard item={item} i={i} key={i} />
+      ))}
     </div>
-    {/* dot line divider will be inside card component */}
-    {/* cards component */}
-    {/* create your plan button */}
+
+    <button type="button">Create your plan</button>
   </HowItWorksStyles>
 );
 

@@ -1,21 +1,20 @@
 import styled from 'styled-components';
 
 const HowItWorksStyles = styled.div`
+  max-width: 87%;
+  margin: 0 auto;
   h4 {
     color: var(--grey);
+    margin-bottom: 3.3em;
   }
-  .dot {
-    height: 25px;
-    width: 25px;
-    border: 1px solid red;
-    border-radius: 50%;
-    display: inline-block;
-    ::after {
-      content: 'here i try and make line';
+
+  .cards-container {
+    display: flex;
+    margin-bottom: 64px;
+    div:last-child .dot::after {
+      display: none;
     }
   }
 `;
-
-// circle css
 
 export default HowItWorksStyles;
