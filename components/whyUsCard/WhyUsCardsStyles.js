@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const WhyUsCardsStyles = styled.div`
   display: flex;
+  margin-bottom: 200px;
   .whyus-card {
     background: var(--darkCyan);
     color: var(--lightCreamBG);
