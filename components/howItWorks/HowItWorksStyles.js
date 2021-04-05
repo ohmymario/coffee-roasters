@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const HowItWorksStyles = styled.div`
   max-width: 87%;
-  margin: 0 auto;
+  margin: 0 auto 200px auto;
   h4 {
     color: var(--grey);
     margin-bottom: 3.3em;
