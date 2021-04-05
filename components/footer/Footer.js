@@ -1,8 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 
 import FooterStyles from './FooterStyles';
+import PageLinks from '../pageLinks/PageLinks';
+import { routes } from '../../constants/routes';
 
 const Footer = () => {
   console.log('footer');
@@ -19,23 +20,7 @@ const Footer = () => {
           />
         </div>
 
-        <ul className="footer-links">
-          <li>
-            <Link href="/">
-              <a>Home</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/about">
-              <a>About Us</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/subscribe">
-              <a>Create your plan</a>
-            </Link>
-          </li>
-        </ul>
+        <PageLinks routes={routes} />
       </div>
 
       <div className="socials">

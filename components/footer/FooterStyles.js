@@ -14,17 +14,8 @@ const FooterStyles = styled.footer`
     max-width: 620px;
     flex: 1 1 auto;
 
-    &-links {
-      display: flex;
-      li {
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 0.75rem;
-        letter-spacing: 0.92px;
-        &:not(:last-child) {
-          padding-right: 2.85em;
-        }
-      }
+    ul {
+      /* needed for future */
     }
   }
 
