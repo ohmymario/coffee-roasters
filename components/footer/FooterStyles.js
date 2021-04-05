@@ -16,11 +16,20 @@ const FooterStyles = styled.footer`
 
     ul {
       /* needed for future */
+      a:hover {
+        color: var(--lightCreamBG);
+      }
     }
   }
 
   .socials {
     div {
+      &:hover {
+        /* workaround to produce proper color */
+        /* cant use fill with next images */
+        filter: brightness(0) saturate(100%) invert(86%) sepia(18%)
+          saturate(5793%) hue-rotate(306deg) brightness(138%) contrast(115%);
+      }
       &:not(:last-child) {
         margin-right: 1.5em;
       }

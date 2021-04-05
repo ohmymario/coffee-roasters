@@ -72,7 +72,7 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: none;
     color: var(--grey);
     &:hover {
-      text-decoration: underline;
+      /* text-decoration: underline; */
     }
   }
 
@@ -91,10 +91,11 @@ const GlobalStyles = createGlobalStyle`
     border-radius: 3px;
     margin: 5px 0;
     &:hover {
-      background: var(--lightCyan)
+      cursor: pointer;
+      background: var(--lightCyan);
     }
     &:disabled {
-      background: var(--btnDisabled)
+      background: var(--btnDisabled);
     }
   }
 
