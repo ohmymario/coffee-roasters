@@ -6,9 +6,9 @@ import HowItWorks from '../components/howItWorks/HowItWorks';
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
-        <title>Create Next App</title>
+        <title>coffeeroasters</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -18,6 +18,6 @@ export default function Home() {
         <WhyUs />
         <HowItWorks />
       </main>
-    </div>
+    </>
   );
 }
