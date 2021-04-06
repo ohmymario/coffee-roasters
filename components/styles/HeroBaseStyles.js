@@ -2,11 +2,9 @@ import styled from 'styled-components';
 
 const HeroBaseStyles = styled.div`
   width: 100%;
-  height: 600px;
   position: relative;
   display: flex;
   align-items: center;
-  margin-bottom: 8.5rem;
 
   .hero-image {
     border-radius: 10px;
@@ -14,18 +12,19 @@ const HeroBaseStyles = styled.div`
   }
 
   .hero-text {
-    /* 117 85 */
     padding-left: 5.3125em;
     width: 50%;
     position: relative;
     z-index: 10000;
-    h1 {
+
+    h1,
+    h2 {
       color: var(--lightCreamBG);
-      margin-bottom: 0.44em;
     }
+
     p {
+      color: var(--lightCreamBG);
       max-width: 75%;
-      margin-bottom: 3.1875em;
     }
   }
 `;
