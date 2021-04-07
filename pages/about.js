@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import AboutUs from '../components/aboutUs/AboutUs';
+import Commitment from '../components/commitment/Commitment';
 
 const about = props => (
   <>
@@ -11,6 +12,7 @@ const about = props => (
 
     <main>
       <AboutUs />
+      <Commitment />
     </main>
   </>
 );
