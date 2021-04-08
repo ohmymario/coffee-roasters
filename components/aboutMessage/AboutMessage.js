@@ -1,10 +1,11 @@
 import React from 'react';
+
 import AboutMessageStyles from './AboutMessageStyles';
 
 const AboutMessage = props => {
-  const { children, primary } = props;
+  const { children, ...restProps } = props;
 
-  return <AboutMessageStyles primary={primary}>{children}</AboutMessageStyles>;
+  return <AboutMessageStyles {...restProps}>{children}</AboutMessageStyles>;
 };
 
 export default AboutMessage;
