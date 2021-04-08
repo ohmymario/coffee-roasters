@@ -2,9 +2,9 @@ import React from 'react';
 import AboutMessageStyles from './AboutMessageStyles';
 
 const AboutMessage = props => {
-  const { children, alt } = props;
+  const { children, primary } = props;
 
-  return <AboutMessageStyles alt={alt}>{children}</AboutMessageStyles>;
+  return <AboutMessageStyles primary={primary}>{children}</AboutMessageStyles>;
 };
 
 export default AboutMessage;

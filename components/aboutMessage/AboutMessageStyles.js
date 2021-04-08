@@ -46,7 +46,7 @@ const AboutMessageStyles = styled.div`
     h2,
     p {
       color: ${props =>
-        props.alt ? 'var(--lightCreamBG)' : 'var(--darkGreyBlue)'};
+        props.primary ? 'var(--lightCreamBG)' : 'var(--darkGreyBlue)'};
     }
   }
 `;
