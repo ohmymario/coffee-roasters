@@ -9,8 +9,8 @@ const PageLinks = props => {
   const { routes } = props;
   return (
     <PageLinksStyles>
-      {routes.map(({ name, route }) => (
-        <li>
+      {routes.map(({ name, route }, i) => (
+        <li key={i}>
           <Link href={route}>
             <a>{name}</a>
           </Link>
