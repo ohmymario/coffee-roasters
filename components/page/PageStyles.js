@@ -62,6 +62,8 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     margin: 0;
     color: var(--grey);
+    background: var(--lightCreamBG);
+
   }
 
   ul {
