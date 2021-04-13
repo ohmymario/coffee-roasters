@@ -56,7 +56,6 @@ const AboutMessageContainer = () => (
       </div>
       <div className="about-msg-background" />
     </AboutMessage>
-    <AboutMessage />
   </>
 );
 
