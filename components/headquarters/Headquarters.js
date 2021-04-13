@@ -1,21 +1,20 @@
 import React from 'react';
+import HeadquartersStyles from './HeadquartersStyles';
 import { headquartersData } from './HeadquartersData';
 
-// example input
-// country: 'United Kingdom',
-// phone: '+44 1241 918425',
-// address: `68 Asfordby Rd
-// Alcaston
-// SY61YA`,
-// img: '/images/headquarters/illustration-uk.svg',
+import HeadquarterCard from '../headquarterCard/HeadquarterCard';
 
-const Headquarters = () => {
-  console.log('headquarters component');
-  return (
-    <div>
-      <p>headquarters component</p>
+// whole component 1045 x 366
+
+const Headquarters = () => (
+  <HeadquartersStyles>
+    <h4>Our headquarters</h4>
+    <div className="hq-cards">
+      {headquartersData.map((item, i) => (
+        <HeadquarterCard item={item} key={i} />
+      ))}
     </div>
-  );
-};
+  </HeadquartersStyles>
+);
 
 export default Headquarters;
