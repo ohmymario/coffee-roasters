@@ -3,6 +3,7 @@ import Head from 'next/head';
 
 import AboutUs from '../components/aboutUs/AboutUs';
 import AboutMessageContainer from '../components/aboutMessageContainer/AboutMessageContainer';
+import Headquarters from '../components/headquarters/Headquarters';
 
 const about = props => (
   <>
@@ -14,6 +15,7 @@ const about = props => (
     <main>
       <AboutUs />
       <AboutMessageContainer />
+      <Headquarters />
     </main>
   </>
 );
