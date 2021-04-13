@@ -82,6 +82,11 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
   }
 
+  pre {
+    font-family: 'Barlow', sans-serif;
+    margin: 0;
+  }
+
   button {
     font-family: 'Fraunces', serif;
     font-size: 1.125rem;
