@@ -1,12 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
 
-import AboutUsStyles from './AboutUsStyles';
+import AboutHeroStyles from './AboutHeroStyles';
 
-// whole component 1280 x 450
-
-const AboutUs = () => (
-  <AboutUsStyles>
+const AboutHero = () => (
+  <AboutHeroStyles>
     <Image
       className="hero-image"
       src="/images/hero/image-hero-whitecup.jpg"
@@ -24,7 +22,7 @@ const AboutUs = () => (
         shipment.
       </p>
     </div>
-  </AboutUsStyles>
+  </AboutHeroStyles>
 );
 
-export default AboutUs;
+export default AboutHero;

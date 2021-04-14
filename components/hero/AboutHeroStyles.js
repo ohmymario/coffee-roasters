@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import HeroBaseStyles from '../styles/HeroBaseStyles';
 
-const AboutUsStyles = styled(HeroBaseStyles)`
+const AboutHeroStyles = styled(HeroBaseStyles)`
   height: 450px;
   margin-bottom: 10.5rem;
 
@@ -14,4 +14,4 @@ const AboutUsStyles = styled(HeroBaseStyles)`
   }
 `;
 
-export default AboutUsStyles;
+export default AboutHeroStyles;
