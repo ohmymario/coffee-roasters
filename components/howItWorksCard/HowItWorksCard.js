@@ -2,9 +2,9 @@ import React from 'react';
 import HowItWorksCardStyles from './HowItWorksCardStyles';
 
 const HowItWorksCard = props => {
-  const { item, i } = props;
+  const { item, i, primary } = props;
   return (
-    <HowItWorksCardStyles>
+    <HowItWorksCardStyles primary={primary}>
       <div className="divider">
         <div className="dot" />
       </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import SubscribeHero from '../components/hero/SubscribeHero';
+import HowItWorks from '../components/howItWorks/HowItWorks';
 
 const subscribe = props => {
   console.log(props);
@@ -14,6 +15,7 @@ const subscribe = props => {
       <main>
         <SubscribeHero />
 
+        <HowItWorks primary={false} />
       </main>
     </>
   );

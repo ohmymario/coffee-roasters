@@ -31,11 +31,14 @@ const HowItWorksCardStyles = styled.div`
       margin-bottom: 1.3em;
       width: 56%;
       min-width: 255px;
+      color: ${props =>
+        props.primary ? 'var(--darkGreyBlue)' : 'var(--lightCreamBG)'};
     }
     p {
-      color: var(--darkGreyBlue);
       width: 66%;
       min-width: 285px;
+      color: ${props =>
+        props.primary ? 'var(--darkGreyBlue)' : 'var(--lightCreamBG)'};
     }
   }
 `;
