@@ -14,9 +14,7 @@ const Hero = () => (
       alt="coffee-press"
     />
     <div className="hero-text">
-      {/* 493 */}
       <h1>Great coffee made simple.</h1>
-      {/* 445 */}
       <p>
         Start your mornings with the world’s best coffees. Try our expertly
         curated artisan coffees from our best roasters delivered directly to
