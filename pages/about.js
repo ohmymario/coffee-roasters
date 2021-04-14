@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 
-import AboutUs from '../components/aboutUs/AboutUs';
+import AboutHero from '../components/hero/AboutHero';
 import AboutMessageContainer from '../components/aboutMessageContainer/AboutMessageContainer';
 import Headquarters from '../components/headquarters/Headquarters';
 
@@ -13,7 +13,7 @@ const about = props => (
     </Head>
 
     <main>
-      <AboutUs />
+      <AboutHero />
       <AboutMessageContainer />
       <Headquarters />
     </main>
