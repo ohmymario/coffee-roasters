@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import SubscribeHero from '../components/hero/SubscribeHero';
 import HowItWorks from '../components/howItWorks/HowItWorks';
+import QuestionContainer from '../components/questionContainer/QuestionContainer';
 
 const subscribe = props => {
   console.log(props);
@@ -14,8 +15,8 @@ const subscribe = props => {
 
       <main>
         <SubscribeHero />
-
         <HowItWorks primary={false} />
+        <QuestionContainer />
       </main>
     </>
   );
