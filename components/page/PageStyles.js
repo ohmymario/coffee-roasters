@@ -14,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
     --lightCreamBG: #FEFCF7;
     --grey: #83888F;
     --gray: val(--grey);
+    --greyOpacity: rgba(131, 136, 143, 0.25);
     --btnDisabled: #E2DEDB;
 
     --maxWidth: calc(1280px + 3rem);
