@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Question from '../question/Question';
 import Selection from '../selection/Selection';
 import { QuestionContainerData } from './QuestionContainerData';
 
@@ -44,6 +45,9 @@ const QuestionContainer = () => {
           index={i}
           key={i}
         />
+      ))}
+      {questionData.map(props => (
+        <Question {...props} />
       ))}
     </div>
   );
