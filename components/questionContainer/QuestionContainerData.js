@@ -2,6 +2,7 @@ export const QuestionContainerData = [
   {
     name: 'Preferences',
     question: 'How do you drink your coffee?',
+    open: false,
     selected: false,
     selectedAnswer: null,
     selections: [
@@ -24,6 +25,7 @@ export const QuestionContainerData = [
   {
     name: 'Bean Type',
     question: 'What type of coffee?',
+    open: false,
     selected: false,
     selectedAnswer: null,
     selections: [
@@ -47,6 +49,7 @@ export const QuestionContainerData = [
   {
     name: 'Quantity',
     question: 'How much would you like?',
+    open: false,
     selected: false,
     selectedAnswer: null,
     selections: [
@@ -70,6 +73,7 @@ export const QuestionContainerData = [
   {
     name: 'Grind Option',
     question: 'Want us to grind them?',
+    open: false,
     selected: false,
     selectedAnswer: null,
     selections: [
@@ -92,6 +96,7 @@ export const QuestionContainerData = [
   {
     name: 'Deliveries',
     question: 'How often should we deliver?',
+    open: false,
     selected: false,
     selectedAnswer: null,
     selections: [
