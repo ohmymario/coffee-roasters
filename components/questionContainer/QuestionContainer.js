@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import QuestionContainerStyles from './QuestionContainerStyles';
 import Question from '../question/Question';
 import Selection from '../selection/Selection';
 import { QuestionContainerData } from './QuestionContainerData';
@@ -36,20 +37,24 @@ const QuestionContainer = () => {
   }
 
   return (
-    <div>
-      {questionData.map((question, i) => (
-        <Selection
-          setTab={setTab}
-          name={question.name}
-          selected={question.selected}
-          index={i}
-          key={i}
-        />
-      ))}
-      {questionData.map(props => (
-        <Question {...props} />
-      ))}
-    </div>
+    <QuestionContainerStyles>
+      <div>
+        {questionData.map((question, i) => (
+          <Selection
+            setTab={setTab}
+            name={question.name}
+            selected={question.selected}
+            index={i}
+            key={i}
+          />
+        ))}
+      </div>
+      <div>
+        {questionData.map(props => (
+          <Question {...props} />
+        ))}
+      </div>
+    </QuestionContainerStyles>
   );
 };
 
