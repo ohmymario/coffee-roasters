@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const SelectionStyles = styled.div`
   display: flex;
+  min-width: 255px;
   padding: 1.5em 0 1.5em 0;
   opacity: ${props => props.selected && '40%'};
   border-bottom: 1px solid var(--greyOpacity)};
@@ -9,7 +10,6 @@ const SelectionStyles = styled.div`
     border-bottom: none;
   }
   :hover {
-    color: red;
     filter: brightness(60%);
   }
 
