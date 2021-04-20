@@ -38,7 +38,7 @@ const QuestionContainer = () => {
 
   return (
     <QuestionContainerStyles>
-      <div>
+      <div className="selection">
         {questionData.map((question, i) => (
           <Selection
             setTab={setTab}
@@ -49,7 +49,7 @@ const QuestionContainer = () => {
           />
         ))}
       </div>
-      <div>
+      <div className="question">
         {questionData.map(props => (
           <Question {...props} />
         ))}
