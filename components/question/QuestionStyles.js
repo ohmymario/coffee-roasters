@@ -24,20 +24,36 @@ const QuestionStyles = styled.div`
     /* for mobile view */
     /* flex-direction: column; */
 
-    div {
-      background: ${props =>
-        props.selected ? 'var(--selectActive)' : 'var(--selectDefault)'};
+    button {
+      background: var(--selectDefault);
+      border: none;
+      text-align: initial;
       border-radius: 10px;
       width: 100%;
       padding: 32px 28px 84px 28px;
-      :hover {
+      outline: none;
+      cursor: pointer;
+      :hover,
+      :focus-visible,
+      :active {
         background: var(--selectHover);
       }
 
+      &.selected {
+        background: var(--selectActive);
+        :hover,
+        :focus-visible,
+        :active {
+          /* TODO: MODIFY WITH LIGHTEN RATHER THAN HARDCODED VALUE */
+          background: #11a29f;
+        }
+        > * {
+          color: var(--lightCreamBG);
+        }
+      }
+
       > * {
-        color: var(--lightCreamBG);
-        color: ${props =>
-          props.selected ? 'var(--lightCreamBG)' : 'var(--darkGreyBlue)'};
+        color: var(--darkGreyBlue);
       }
 
       h4 {

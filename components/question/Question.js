@@ -2,8 +2,16 @@ import React from 'react';
 import QuestionStyles from './QuestionStyles';
 
 const Question = props => {
-  console.log(props);
-  const { name, open, question, selected, selectedAnswer, selections } = props;
+  const {
+    name,
+    open,
+    question,
+    selected,
+    selectedAnswer,
+    selections,
+    setQuestionAnswer,
+  } = props;
+
   return (
     <QuestionStyles selected={selected}>
       <div className="question-container">
@@ -11,11 +19,16 @@ const Question = props => {
         <span>arrow</span>
       </div>
       <div className="answer-container">
-        {selections.map(answer => (
-          <div>
+        {selections.map((answer, i) => (
+          <button
+            key={i}
+            onClick={() => setQuestionAnswer(name, answer.title)}
+            type="button"
+            className={answer.title === selectedAnswer ? 'selected' : undefined}
+          >
             <h4>{answer.title}</h4>
             <p>{answer.description}</p>
-          </div>
+          </button>
         ))}
       </div>
     </QuestionStyles>

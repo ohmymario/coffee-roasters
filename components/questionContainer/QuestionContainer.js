@@ -50,8 +50,8 @@ const QuestionContainer = () => {
         ))}
       </div>
       <div className="question">
-        {questionData.map(props => (
-          <Question {...props} />
+        {questionData.map((props, i) => (
+          <Question key={i} {...props} setQuestionAnswer={setQuestionAnswer} />
         ))}
       </div>
     </QuestionContainerStyles>
