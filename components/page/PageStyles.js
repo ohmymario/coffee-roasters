@@ -17,6 +17,10 @@ const GlobalStyles = createGlobalStyle`
     --greyOpacity: rgba(131, 136, 143, 0.25);
     --btnDisabled: #E2DEDB;
 
+    --selectDefault: #F4F1EB;
+    --selectHover: var(--paleOrange);
+    --selectActive: var(--darkCyan);
+
     --maxWidth: calc(1280px + 3rem);
     box-sizing: border-box;
     font-size: 1rem;
