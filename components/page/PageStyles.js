@@ -92,7 +92,7 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
   }
 
-  button {
+  button.button {
     font-family: 'Fraunces', serif;
     font-size: 1.125rem;
     color: var(--lightCreamBG);

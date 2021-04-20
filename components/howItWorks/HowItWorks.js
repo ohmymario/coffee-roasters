@@ -15,7 +15,13 @@ const HowItWorks = props => {
         ))}
       </div>
 
-      {primary ? <button type="button">Create your plan</button> : ''}
+      {primary ? (
+        <button className="button" type="button">
+          Create your plan
+        </button>
+      ) : (
+        ''
+      )}
     </HowItWorksStyles>
   );
 };

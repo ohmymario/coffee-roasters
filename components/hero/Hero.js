@@ -20,7 +20,9 @@ const Hero = () => (
         curated artisan coffees from our best roasters delivered directly to
         your door, at your schedule.
       </p>
-      <button type="button">Create your plan</button>
+      <button className="button" type="button">
+        Create your plan
+      </button>
     </div>
   </HeroStyles>
 );
