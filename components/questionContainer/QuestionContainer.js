@@ -52,7 +52,12 @@ const QuestionContainer = () => {
       </div>
       <div className="question">
         {questionData.map((props, i) => (
-          <Question key={i} {...props} setQuestionAnswer={setQuestionAnswer} />
+          <Question
+            key={i}
+            {...props}
+            setTab={setTab}
+            setQuestionAnswer={setQuestionAnswer}
+          />
         ))}
       </div>
     </QuestionContainerStyles>
