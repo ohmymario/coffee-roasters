@@ -27,7 +27,7 @@ const Question = props => {
           />
         </button>
       </div>
-      <div className="answer-container">
+      <div className={`answer-container ${open ? 'fadeIn' : 'fadeOut'}`}>
         {selections.map((answer, i) => (
           <button
             key={i}

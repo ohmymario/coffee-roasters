@@ -36,6 +36,15 @@ const QuestionStyles = styled.div`
     /* for mobile view */
     /* flex-direction: column; */
 
+    &.fadeOut {
+      opacity: 0;
+      height: 0;
+    }
+    &.fadeIn {
+      opacity: 1;
+      transition: height 0.2s, opacity 0.5s;
+    }
+
     button {
       background: var(--selectDefault);
       border: none;
