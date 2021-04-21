@@ -8,6 +8,13 @@ const QuestionContainer = () => {
   const [questionData, setQuestionData] = useState(QuestionContainerData);
 
   // prob really good place for a custom hook
+  function updateQuesState(updatedQuestion, name) {
+    const updatedData = questionData.map(data => {
+      if (data.name === name) return updatedQuestion;
+      return data;
+    });
+    setQuestionData(updatedData);
+  }
 
   function updateAnswer(findQuestion, name, answer) {
     const updatedQuestion = {
@@ -15,11 +22,7 @@ const QuestionContainer = () => {
       selectedAnswer: answer,
       selected: true,
     };
-    const updatedData = questionData.map(data => {
-      if (data.name === name) return updatedQuestion;
-      return data;
-    });
-    setQuestionData(updatedData);
+    updateQuesState(updatedQuestion, name);
   }
 
   function deselectAnswer(findQuestion, name) {
@@ -29,11 +32,7 @@ const QuestionContainer = () => {
       selectedAnswer: null,
     };
 
-    const updatedData = questionData.map(data => {
-      if (data.name === name) return updatedQuestion;
-      return data;
-    });
-    setQuestionData(updatedData);
+    updateQuesState(updatedQuestion, name);
   }
 
   function setQuestion(name, answer) {
@@ -53,11 +52,7 @@ const QuestionContainer = () => {
       open: !findQuestion.open,
     };
 
-    const updatedData = questionData.map(data => {
-      if (data.name === name) return updatedQuestion;
-      return data;
-    });
-    setQuestionData(updatedData);
+    updateQuesState(updatedQuestion, name);
   }
 
   return (
