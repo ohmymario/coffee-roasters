@@ -7,13 +7,26 @@ import { QuestionContainerData } from './QuestionContainerData';
 const QuestionContainer = () => {
   const [questionData, setQuestionData] = useState(QuestionContainerData);
 
-  function setQuestionAnswer(name, answer) {
-    // TODO: IF THE ANSWER IS ALREADY SELECTED THEN DESELECT IT
-    const findQuestion = questionData.find(data => data.name === name);
+  // prob really good place for a custom hook
+
+  function updateAnswer(findQuestion, name, answer) {
     const updatedQuestion = {
       ...findQuestion,
       selectedAnswer: answer,
       selected: true,
+    };
+    const updatedData = questionData.map(data => {
+      if (data.name === name) return updatedQuestion;
+      return data;
+    });
+    setQuestionData(updatedData);
+  }
+
+  function deselectAnswer(findQuestion, name) {
+    const updatedQuestion = {
+      ...findQuestion,
+      selected: false,
+      selectedAnswer: null,
     };
 
     const updatedData = questionData.map(data => {
@@ -21,6 +34,16 @@ const QuestionContainer = () => {
       return data;
     });
     setQuestionData(updatedData);
+  }
+
+  function setQuestion(name, answer) {
+    const findQuestion = questionData.find(data => data.name === name);
+    if (answer === findQuestion.selectedAnswer) {
+      deselectAnswer(findQuestion, name);
+      return;
+    }
+
+    updateAnswer(findQuestion, name, answer);
   }
 
   function setTab(name) {
@@ -56,7 +79,7 @@ const QuestionContainer = () => {
             key={i}
             {...props}
             setTab={setTab}
-            setQuestionAnswer={setQuestionAnswer}
+            setQuestion={setQuestion}
           />
         ))}
       </div>

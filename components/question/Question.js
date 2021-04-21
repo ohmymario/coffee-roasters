@@ -10,7 +10,7 @@ const Question = props => {
     selected,
     selectedAnswer,
     selections,
-    setQuestionAnswer,
+    setQuestion,
     setTab,
   } = props;
 
@@ -31,7 +31,7 @@ const Question = props => {
         {selections.map((answer, i) => (
           <button
             key={i}
-            onClick={() => setQuestionAnswer(name, answer.title)}
+            onClick={() => setQuestion(name, answer.title)}
             type="button"
             className={answer.title === selectedAnswer ? 'selected' : undefined}
           >
