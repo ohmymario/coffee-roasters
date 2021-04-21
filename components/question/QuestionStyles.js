@@ -13,8 +13,20 @@ const QuestionStyles = styled.div`
 
   .question-container {
     margin-bottom: 3.5em;
+    align-items: center;
     h2 {
       color: var(--grey);
+    }
+    button {
+      border: none;
+      outline: none;
+      background: none;
+      :focus-visible {
+        box-shadow: 0 0 2px 2px #51a7e8;
+      }
+      img {
+        transform: ${props => (props.open ? `rotate(180deg)` : `rotate(0deg)`)};
+      }
     }
   }
 

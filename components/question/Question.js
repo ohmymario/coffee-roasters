@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import QuestionStyles from './QuestionStyles';
 
 const Question = props => {
@@ -13,10 +14,17 @@ const Question = props => {
   } = props;
 
   return (
-    <QuestionStyles selected={selected}>
+    <QuestionStyles selected={selected} open={open}>
       <div className="question-container">
         <h2>{question}</h2>
-        <span>arrow</span>
+        <button type="button">
+          <Image
+            src="/images/icons/icon-arrow.svg"
+            layout="fixed"
+            height={11}
+            width={18}
+          />
+        </button>
       </div>
       <div className="answer-container">
         {selections.map((answer, i) => (

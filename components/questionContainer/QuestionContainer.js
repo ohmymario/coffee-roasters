@@ -8,6 +8,7 @@ const QuestionContainer = () => {
   const [questionData, setQuestionData] = useState(QuestionContainerData);
 
   function setQuestionAnswer(name, answer) {
+    // TODO: IF THE ANSWER IS ALREADY SELECTED THEN DESELECT IT
     const findQuestion = questionData.find(data => data.name === name);
     const updatedQuestion = {
       ...findQuestion,
