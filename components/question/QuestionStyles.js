@@ -39,6 +39,7 @@ const QuestionStyles = styled.div`
     &.fadeOut {
       opacity: 0;
       height: 0;
+      display: none;
     }
     &.fadeIn {
       opacity: 1;
