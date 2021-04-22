@@ -16,6 +16,7 @@ const QuestionStyles = styled.div`
     align-items: center;
     h2 {
       color: var(--grey);
+      color: ${props => (props.disabled ? `red` : `green`)};
     }
     button {
       border: none;

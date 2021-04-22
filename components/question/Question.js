@@ -6,6 +6,7 @@ const Question = props => {
   const {
     name,
     open,
+    disabled,
     question,
     selected,
     selectedAnswer,
@@ -15,7 +16,7 @@ const Question = props => {
   } = props;
 
   return (
-    <QuestionStyles selected={selected} open={open}>
+    <QuestionStyles disabled={disabled} selected={selected} open={open}>
       <div className="question-container">
         <h2>{question}</h2>
         <button type="button" onClick={() => toggleTab(name)}>
