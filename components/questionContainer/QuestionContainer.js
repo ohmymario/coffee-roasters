@@ -68,7 +68,7 @@ const QuestionContainer = () => {
       <div className="selection">
         {questionData.map((question, i) => (
           <Selection
-            setTab={setTab}
+            toggleTab={toggleTab}
             name={question.name}
             selected={question.selected}
             index={i}
@@ -81,7 +81,7 @@ const QuestionContainer = () => {
           <Question
             key={i}
             {...props}
-            setTab={setTab}
+            toggleTab={toggleTab}
             setQuestion={setQuestion}
           />
         ))}
