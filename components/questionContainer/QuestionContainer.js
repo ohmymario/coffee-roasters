@@ -13,21 +13,22 @@ const QuestionContainer = () => {
       if (data.name === name) return updatedQuestion;
       return data;
     });
+
     setQuestionData(updatedData);
   }
 
-  function updateAnswer(findQuestion, name, answer) {
+  function updateAnswer(foundQuestion, name, answer) {
     const updatedQuestion = {
-      ...findQuestion,
+      ...foundQuestion,
       selectedAnswer: answer,
       selected: true,
     };
     updateQuesState(updatedQuestion, name);
   }
 
-  function deselectAnswer(findQuestion, name) {
+  function deselectAnswer(foundQuestion, name) {
     const updatedQuestion = {
-      ...findQuestion,
+      ...foundQuestion,
       selected: false,
       selectedAnswer: null,
     };
@@ -43,24 +44,62 @@ const QuestionContainer = () => {
     };
     updateQuesState(updatedQuestion, name);
   }
+
+  function handleCapsule(foundQuestion, name, answer) {
+    const grindDef = {
+      name: 'Grind Option',
+      question: 'Want us to grind them?',
+      open: false,
+      disabled: true,
+      selected: false,
+      selectedAnswer: null,
+      selections: [
+        {
+          title: 'Wholebean',
+          description: 'Best choice if you cherish the full sensory experience',
+        },
+        {
+          title: 'Filter',
+          description:
+            'For drip or pour-over coffee methods such as V60 or Aeropress',
+        },
+        {
+          title: 'Cafetiére',
+          description:
+            'Course ground beans specially suited for french press coffee',
+        },
+      ],
+    };
+
+    const updatedQuestion = {
+      ...foundQuestion,
+      selectedAnswer: answer,
+      selected: true,
+    };
+
+    const updatedData = questionData.map(data => {
+      if (data.name === name) return updatedQuestion;
+      if (data.name === 'Grind Option') return grindDef;
+      return data;
+    });
+
+    setQuestionData(updatedData);
+  }
+
   function setQuestion(name, answer) {
-    const findQuestion = questionData.find(data => data.name === name);
-    if (answer === findQuestion.selectedAnswer) {
-      deselectAnswer(findQuestion, name);
+    const foundQuestion = questionData.find(data => data.name === name);
+
+    if (answer === foundQuestion.selectedAnswer) {
+      deselectAnswer(foundQuestion, name);
       return;
     }
 
-    updateAnswer(findQuestion, name, answer);
-  }
+    if (answer === 'Capsule') {
+      handleCapsule(foundQuestion, name, answer);
+      return;
+    }
 
-  function setTab(name) {
-    const findQuestion = questionData.find(data => data.name === name);
-    const updatedQuestion = {
-      ...findQuestion,
-      open: !findQuestion.open,
-    };
-
-    updateQuesState(updatedQuestion, name);
+    updateAnswer(foundQuestion, name, answer);
   }
 
   return (
