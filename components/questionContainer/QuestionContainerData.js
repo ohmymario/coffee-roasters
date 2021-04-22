@@ -74,6 +74,7 @@ export const QuestionContainerData = [
     name: 'Grind Option',
     question: 'Want us to grind them?',
     open: false,
+    disabled: false,
     selected: false,
     selectedAnswer: null,
     selections: [
