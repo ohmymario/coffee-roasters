@@ -11,14 +11,14 @@ const Question = props => {
     selectedAnswer,
     selections,
     setQuestion,
-    setTab,
+    toggleTab,
   } = props;
 
   return (
     <QuestionStyles selected={selected} open={open}>
       <div className="question-container">
         <h2>{question}</h2>
-        <button type="button" onClick={() => setTab(name)}>
+        <button type="button" onClick={() => toggleTab(name)}>
           <Image
             src="/images/icons/icon-arrow.svg"
             layout="fixed"

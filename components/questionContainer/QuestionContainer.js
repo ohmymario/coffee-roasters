@@ -35,6 +35,14 @@ const QuestionContainer = () => {
     updateQuesState(updatedQuestion, name);
   }
 
+  function toggleTab(name) {
+    const foundQuestion = questionData.find(data => data.name === name);
+    const updatedQuestion = {
+      ...foundQuestion,
+      open: !foundQuestion.open,
+    };
+    updateQuesState(updatedQuestion, name);
+  }
   function setQuestion(name, answer) {
     const findQuestion = questionData.find(data => data.name === name);
     if (answer === findQuestion.selectedAnswer) {

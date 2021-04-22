@@ -7,9 +7,9 @@ import SelectionStyles from './SelectionStyles';
 // if selected capsule - disable the grind selection
 
 const Selection = props => {
-  const { name, index, selected, setTab } = props;
+  const { name, index, selected, toggleTab } = props;
   return (
-    <SelectionStyles selected={selected} onClick={() => setTab(name)}>
+    <SelectionStyles selected={selected} onClick={() => toggleTab(name)}>
       <h4 className="selection-num">{`0${index + 1}`}</h4>
       <h4 className="selection-name">{name}</h4>
     </SelectionStyles>
