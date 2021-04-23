@@ -45,30 +45,14 @@ const QuestionContainer = () => {
     updateQuesState(updatedQuestion, name);
   }
 
-  function handleCapsule(foundQuestion, name, answer) {
-    const grindDef = {
-      name: 'Grind Option',
-      question: 'Want us to grind them?',
-      open: false,
+  function handlePref(foundQuestion, name, answer) {
+    const grindDefault = QuestionContainerData.find(
+      item => item.name === 'Grind Option'
+    );
+
+    const grindDisabled = {
+      ...grindDefault,
       disabled: true,
-      selected: false,
-      selectedAnswer: null,
-      selections: [
-        {
-          title: 'Wholebean',
-          description: 'Best choice if you cherish the full sensory experience',
-        },
-        {
-          title: 'Filter',
-          description:
-            'For drip or pour-over coffee methods such as V60 or Aeropress',
-        },
-        {
-          title: 'Cafetiére',
-          description:
-            'Course ground beans specially suited for french press coffee',
-        },
-      ],
     };
 
     const updatedQuestion = {
@@ -77,25 +61,53 @@ const QuestionContainer = () => {
       selected: true,
     };
 
-    const updatedData = questionData.map(data => {
-      if (data.name === name) return updatedQuestion;
-      if (data.name === 'Grind Option') return grindDef;
-      return data;
-    });
+    const noAnswer = {
+      ...foundQuestion,
+      selected: false,
+      selectedAnswer: null,
+    };
 
-    setQuestionData(updatedData);
+    // if its trying to remove answer then reset grind
+    if (answer === foundQuestion.selectedAnswer) {
+      const updatedData = questionData.map(data => {
+        if (data.name === name) return noAnswer;
+        if (data.name === 'Grind Option') return grindDefault;
+        return data;
+      });
+      setQuestionData(updatedData);
+      return;
+    }
+
+    // if its anything but capsule then reset grind
+    if (answer !== 'Capsule') {
+      const updatedData = questionData.map(data => {
+        if (data.name === name) return updatedQuestion;
+        if (data.name === 'Grind Option') return grindDefault;
+        return data;
+      });
+      setQuestionData(updatedData);
+      return;
+    }
+
+    // if its capsule then reset disable
+    if (answer === 'Capsule') {
+      const updatedData = questionData.map(data => {
+        if (data.name === name) return updatedQuestion;
+        if (data.name === 'Grind Option') return grindDisabled;
+        return data;
+      });
+      setQuestionData(updatedData);
+    }
   }
 
   function setQuestion(name, answer) {
     const foundQuestion = questionData.find(data => data.name === name);
-
-    if (answer === foundQuestion.selectedAnswer) {
-      deselectAnswer(foundQuestion, name);
+    if (name === 'Preferences') {
+      handlePref(foundQuestion, name, answer);
       return;
     }
-
-    if (answer === 'Capsule') {
-      handleCapsule(foundQuestion, name, answer);
+    if (answer === foundQuestion.selectedAnswer) {
+      deselectAnswer(foundQuestion, name);
       return;
     }
 
