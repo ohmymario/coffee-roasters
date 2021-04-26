@@ -1,25 +1,34 @@
 import styled from 'styled-components';
 
 const SelectionStyles = styled.div`
-  display: flex;
   min-width: 255px;
   padding: 1.5em 0 1.5em 0;
-  opacity: ${props => props.selected && '40%'};
+  opacity: ${props => (props.selected || props.disabled ? '40%' : '')};
   border-bottom: 1px solid var(--greyOpacity);
-  cursor: pointer;
   :last-child {
     border-bottom: none;
   }
   :hover {
-    filter: brightness(60%);
+    filter: ${props =>
+      props.disabled ? 'brightness(100%)' : 'brightness(60%);'};
   }
 
-  .selection-num {
-    margin-right: 28.5px;
-    color: ${props => (props.selected ? 'var(--darkCyan)' : ' var(--grey)')};
-  }
-  .selection-name {
-    color: var(--darkGreyBlue);
+  button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    display: flex;
+    &[disabled] {
+      cursor: not-allowed;
+    }
+
+    .selection-num {
+      margin-right: 28.5px;
+      color: ${props => (props.selected ? 'var(--darkCyan)' : ' var(--grey)')};
+    }
+    .selection-name {
+      color: var(--darkGreyBlue);
+    }
   }
 `;
 

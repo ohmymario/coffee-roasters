@@ -120,6 +120,7 @@ const QuestionContainer = () => {
         {questionData.map((question, i) => (
           <Selection
             toggleTab={toggleTab}
+            disabled={question.disabled}
             name={question.name}
             selected={question.selected}
             index={i}
