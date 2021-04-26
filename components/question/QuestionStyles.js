@@ -16,17 +16,21 @@ const QuestionStyles = styled.div`
     align-items: center;
     h2 {
       color: var(--grey);
-      color: ${props => (props.disabled ? `red` : `green`)};
+      opacity: ${props => (props.disabled ? `50%` : `100%`)};
     }
     button {
       border: none;
       outline: none;
       background: none;
-      :focus-visible {
+      &:focus-visible {
         box-shadow: 0 0 2px 2px #51a7e8;
+      }
+      &[disabled] {
+        pointer-events: none;
       }
       img {
         transform: ${props => (props.open ? `rotate(180deg)` : `rotate(0deg)`)};
+        opacity: ${props => (props.disabled ? `50%` : `100%`)};
       }
     }
   }
@@ -60,6 +64,10 @@ const QuestionStyles = styled.div`
       :focus-visible,
       :active {
         background: var(--selectHover);
+      }
+
+      &[disabled] {
+        pointer-events: none;
       }
 
       &.selected {
