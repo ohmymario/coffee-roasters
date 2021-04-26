@@ -19,7 +19,11 @@ const Question = props => {
     <QuestionStyles disabled={disabled} selected={selected} open={open}>
       <div className="question-container">
         <h2>{question}</h2>
-        <button type="button" onClick={() => toggleTab(name)}>
+        <button
+          disabled={disabled}
+          type="button"
+          onClick={() => toggleTab(name)}
+        >
           <Image
             src="/images/icons/icon-arrow.svg"
             layout="fixed"
@@ -31,6 +35,7 @@ const Question = props => {
       <div className={`answer-container ${open ? 'fadeIn' : 'fadeOut'}`}>
         {selections.map((answer, i) => (
           <button
+            disabled={disabled}
             key={i}
             onClick={() => setQuestion(name, answer.title)}
             type="button"
