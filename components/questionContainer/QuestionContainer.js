@@ -121,6 +121,7 @@ const QuestionContainer = () => {
           <Selection
             toggleTab={toggleTab}
             disabled={question.disabled}
+            question={question.question}
             name={question.name}
             selected={question.selected}
             index={i}
