@@ -15,7 +15,6 @@ const Selection = props => {
     toggleTab,
     disabled = false,
   } = props;
-  console.log(disabled);
   return (
     <SelectionStyles disabled={disabled} selected={selected}>
       <button
