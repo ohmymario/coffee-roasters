@@ -17,6 +17,7 @@ const QuestionStyles = styled.div`
     border: none;
     outline: none;
     background: none;
+    opacity: ${props => (props.disabled ? `50%` : `100%`)};
     &:focus-visible {
       box-shadow: 0 0 2px 2px #51a7e8;
     }
@@ -30,12 +31,10 @@ const QuestionStyles = styled.div`
 
     h2 {
       color: var(--grey);
-      opacity: ${props => (props.disabled ? `50%` : `100%`)};
     }
 
     img {
       transform: ${props => (props.open ? `rotate(180deg)` : `rotate(0deg)`)};
-      opacity: ${props => (props.disabled ? `50%` : `100%`)};
     }
   }
 
