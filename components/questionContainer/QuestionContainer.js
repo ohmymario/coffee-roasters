@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import QuestionContainerStyles from './QuestionContainerStyles';
 import Question from '../question/Question';
 import Selection from '../selection/Selection';
 import { QuestionContainerData } from './QuestionContainerData';
+import OrderSummary from '../orderSummary/OrderSummary';
 
 const QuestionContainer = () => {
   const [questionData, setQuestionData] = useState(QuestionContainerData);
+  const [answers, setAnswers] = useState({});
 
   // prob really good place for a custom hook
   function updateQuesState(updatedQuestion, name) {
@@ -114,6 +116,16 @@ const QuestionContainer = () => {
     updateAnswer(foundQuestion, name, answer);
   }
 
+  // Creates object with answers
+  useEffect(() => {
+    const allAnswer = questionData.reduce((acc, curr) => {
+      const { name, selectedAnswer } = curr;
+      return { ...acc, [name]: selectedAnswer };
+    }, {});
+
+    setAnswers(allAnswer);
+  }, [questionData]);
+
   return (
     <QuestionContainerStyles>
       <div className="selection">
@@ -138,6 +150,7 @@ const QuestionContainer = () => {
             setQuestion={setQuestion}
           />
         ))}
+        <OrderSummary answers={answers} />
       </div>
     </QuestionContainerStyles>
   );
