@@ -1,4 +1,5 @@
 import React from 'react';
+import OrderSummaryStyles from './OrderSummaryStyles';
 
 const OrderSummary = props => {
   const { answers } = props;
@@ -10,28 +11,35 @@ const OrderSummary = props => {
 
   const orderSummaryMessage = preferences => {
     if (preferences === 'Capsule') {
-      return `“I drink my coffee using
-      ${checkForAnswer('Preferences')}s, with a
-      ${checkForAnswer('Bean Type')} type of bean.
-      ${checkForAnswer('Quantity')} , sent to me
-      ${checkForAnswer('Deliveries')}.”`;
+      return (
+        <>
+          “I drink my coffee using
+          <span> {checkForAnswer('Preferences')}s</span>, with a
+          <span> {checkForAnswer('Bean Type')} </span> type of bean.
+          <span> {checkForAnswer('Quantity')} </span> , sent to me
+          <span> {checkForAnswer('Deliveries')} </span>.”
+        </>
+      );
     }
 
-    return `“I drink my coffee as
-    ${checkForAnswer('Preferences')}, with a
-    ${checkForAnswer('Bean Type')} type of bean.
-    ${checkForAnswer('Quantity')} ground ala
-    ${checkForAnswer('Grind Option')}, sent to me
-    ${checkForAnswer('Deliveries')}.”`;
+    return (
+      <>
+        “I drink my coffee as
+        <span> {checkForAnswer('Preferences')} </span>, with a
+        <span> {checkForAnswer('Bean Type')} </span> type of bean.
+        <span> {checkForAnswer('Quantity')} </span> ground ala
+        <span> {checkForAnswer('Grind Option')} </span>, sent to me
+        <span> {checkForAnswer('Deliveries')} </span>.”
+      </>
+    );
   };
-
   return (
-    <div>
-      <p>Order Summary</p>
+    <OrderSummaryStyles>
+      <p className="order-title">Order Summary</p>
       <div className="order-summary">
-        {orderSummaryMessage(answers.Preferences)}
+        <h4>{orderSummaryMessage(answers.Preferences)}</h4>
       </div>
-    </div>
+    </OrderSummaryStyles>
   );
 };
 
