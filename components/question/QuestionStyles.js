@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+// TODO: if its the last question check if its closed if yes then remove the margin on the button
+
 const QuestionStyles = styled.div`
   display: flex;
   flex-direction: column;
