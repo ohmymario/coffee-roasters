@@ -7,6 +7,10 @@ const QuestionStyles = styled.div`
   flex-direction: column;
   margin-bottom: 5.5em;
 
+  :nth-last-child(2) {
+    margin-bottom: ${props => (props.open ? '' : '0')};
+  }
+
   .answer-container,
   .question-container {
     display: flex;
