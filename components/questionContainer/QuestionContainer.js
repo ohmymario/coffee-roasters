@@ -4,11 +4,12 @@ import Question from '../question/Question';
 import Selection from '../selection/Selection';
 import { QuestionContainerData } from './QuestionContainerData';
 import OrderSummary from '../orderSummary/OrderSummary';
+import OrderModal from '../orderModal/OrderModal';
 
 const QuestionContainer = () => {
   const [questionData, setQuestionData] = useState(QuestionContainerData);
   const [answers, setAnswers] = useState({});
-
+  const [open, setOpen] = useState(false);
   // prob really good place for a custom hook
   function updateQuesState(updatedQuestion, name) {
     const updatedData = questionData.map(data => {
@@ -151,6 +152,12 @@ const QuestionContainer = () => {
           />
         ))}
         <OrderSummary answers={answers} />
+        <div className="question-submit">
+          <button onClick={() => setOpen(true)} type="button">
+            Create my plan!
+          </button>
+          <OrderModal open={open} setOpen={setOpen} answers={answers} />
+        </div>
       </div>
     </QuestionContainerStyles>
   );
