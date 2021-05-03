@@ -8,6 +8,9 @@ const QuestionContainerStyles = styled.div`
 
   .question {
     flex: 0 1 730px;
+    &-submit {
+      text-align: end;
+    }
   }
 `;
 
