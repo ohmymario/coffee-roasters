@@ -153,7 +153,11 @@ const QuestionContainer = () => {
         ))}
         <OrderSummary answers={answers} />
         <div className="question-submit">
-          <button onClick={() => setOpen(true)} type="button">
+          <button
+            onClick={() => setOpen(true)}
+            type="button"
+            className="button"
+          >
             Create my plan!
           </button>
           <OrderModal open={open} setOpen={setOpen} answers={answers} />

@@ -6,6 +6,7 @@ const OrderSummaryStyles = styled.div`
   background: #2c343e;
   border-radius: 10px;
   color: #ffffff;
+  margin-bottom: 2.2em;
 
   .order-title {
     opacity: 0.537;
