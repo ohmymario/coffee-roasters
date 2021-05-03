@@ -7,7 +7,7 @@ const QuestionStyles = styled.div`
   flex-direction: column;
   margin-bottom: 5.5em;
 
-  :nth-last-child(2) {
+  :nth-last-child(3) {
     margin-bottom: ${props => (props.open ? '' : '0')};
   }
 
