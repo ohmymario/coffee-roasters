@@ -35,10 +35,15 @@ const OrderModal = props => {
     );
   };
 
+  const closeModal = ({ target: { id } }) => {
+    if (id === 'overlay') setOpen(false);
+    if (id === 'button') setOpen(false);
+  };
+
   console.log(props);
   return open
     ? ReactDOM.createPortal(
-        <Overlay onClick={() => setOpen(false)}>
+        <Overlay id="overlay" onClick={e => closeModal(e)}>
           <OrderModalStyles>
             <div className="title-bg">
               <div className="title">
@@ -56,7 +61,12 @@ const OrderModal = props => {
               </div>
               <div className="order-checkout">
                 <h3>$14.00/ mo</h3>
-                <button type="button" className="button">
+                <button
+                  type="button"
+                  className="button"
+                  id="button"
+                  onClick={e => closeModal(e)}
+                >
                   Checkout
                 </button>
               </div>
