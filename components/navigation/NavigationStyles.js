@@ -4,8 +4,11 @@ const NavigationStyles = styled.nav`
   ul {
     padding: 0;
     margin: 0;
-    a:hover {
-      color: var(--darkGreyBlue);
+    a {
+      transition: color 0.25s;
+      &:hover {
+        color: var(--darkGreyBlue);
+      }
     }
   }
 `;

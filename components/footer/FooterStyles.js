@@ -29,6 +29,7 @@ const FooterStyles = styled.footer`
         /* cant use fill with next images */
         filter: brightness(0) saturate(100%) invert(86%) sepia(18%)
           saturate(5793%) hue-rotate(306deg) brightness(138%) contrast(115%);
+        cursor: pointer;
       }
       &:not(:last-child) {
         margin-right: 1.5em;

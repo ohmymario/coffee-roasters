@@ -102,6 +102,7 @@ const GlobalStyles = createGlobalStyle`
     width: 220px;
     border-radius: 3px;
     margin: 5px 0;
+    transition: background 0.15s;
     &:hover {
       cursor: pointer;
       background: var(--lightCyan);
