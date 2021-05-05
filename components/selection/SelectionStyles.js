@@ -5,12 +5,8 @@ const SelectionStyles = styled.div`
   padding: 1.5em 0 1.5em 0;
   opacity: ${props => (props.selected || props.disabled ? '40%' : '')};
   border-bottom: 1px solid var(--greyOpacity);
-  :last-child {
+  &:last-child {
     border-bottom: none;
-  }
-  :hover {
-    filter: ${props =>
-      props.disabled ? 'brightness(100%)' : 'brightness(60%);'};
   }
 
   button {
@@ -18,8 +14,14 @@ const SelectionStyles = styled.div`
     border: none;
     background: none;
     display: flex;
+    transition: filter 0.25s;
     &[disabled] {
       cursor: not-allowed;
+    }
+
+    &:hover {
+      filter: ${props =>
+        props.disabled ? 'brightness(100%)' : 'brightness(60%);'};
     }
 
     .selection-num {
