@@ -1,11 +1,6 @@
 import React from 'react';
 import SelectionStyles from './SelectionStyles';
 
-// there is a selection in the tab then grey out - DONE
-// clickable - open the tab - DONE
-// 'hook' up to each question and keep in state located in questionContainer - DONE
-// if selected capsule - disable the grind selection - DONE
-
 const Selection = props => {
   const {
     name,
