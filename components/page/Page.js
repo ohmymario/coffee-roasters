@@ -6,6 +6,7 @@ import Footer from '../footer/Footer';
 const InnerStyles = styled.div`
   max-width: var(--maxWidth);
   margin: 0 auto;
+  /* TODO: CHANGE PADDING FOR TABLET */
   padding: 1.5rem;
 `;
 
