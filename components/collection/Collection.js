@@ -16,7 +16,7 @@ const Collection = () => (
             width={item.width}
             height={item.height}
             quality={100}
-            object-fit="contain"
+            object-fit="fixed"
             alt={item.alt}
           />
           <div className="collection-text">
