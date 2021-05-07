@@ -36,6 +36,18 @@ const WhyUsStyles = styled.div`
       padding-bottom: 1em;
     }
   }
+
+  @media (max-width: 768px) {
+    padding: 56px 58px 0 58px;
+    .whyus-text {
+      h2 {
+        font-size: 32px;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+  }
 `;
 
 export default WhyUsStyles;

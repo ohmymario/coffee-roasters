@@ -31,6 +31,37 @@ const WhyUsCardsStyles = styled.div`
       }
     }
   }
+  @media (max-width: 768px) {
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 144px;
+    .whyus-card {
+      width: 100%;
+      flex-direction: row;
+      padding: 2.5em 3em 2.5em 4.4em;
+      margin: 0;
+      margin-bottom: 1.5em;
+
+      &-icon {
+        padding-top: 5px;
+        * {
+          max-height: 56px;
+        }
+
+        margin-bottom: 0;
+        flex-shrink: 0;
+        margin-right: 55px;
+      }
+      &-text {
+        font-size: 15px;
+        line-height: 1.67;
+        text-align: unset;
+        h4 {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
 `;
 
 export default WhyUsCardsStyles;
