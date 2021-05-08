@@ -14,10 +14,23 @@ const HowItWorksStyles = styled.div`
   }
 
   .cards-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
     ${props => (props.primary ? `margin-bottom: 64px;` : `margin-bottom: 0`)};
     div:last-child .dot::after {
       display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 0;
+    margin: 0 auto ${props => (props.primary ? `144px` : `159px`)} auto;
+    h4 {
+      margin-bottom: 1.7em;
+    }
+    .cards-container {
+      ${props => (props.primary ? `margin-bottom: 44px;` : `margin-bottom: 0`)};
     }
   }
 `;
