@@ -43,9 +43,6 @@ const WhyUsStyles = styled.div`
       h2 {
         font-size: 32px;
       }
-      p {
-        font-size: 15px;
-      }
     }
   }
 `;

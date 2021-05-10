@@ -60,9 +60,6 @@ const HowItWorksCardStyles = styled.div`
       h3 {
         font-size: 28px;
       }
-      p {
-        font-size: 15px;
-      }
     }
   }
 `;

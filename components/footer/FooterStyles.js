@@ -32,10 +32,8 @@ const FooterStyles = styled.footer`
 
   @media (max-width: 768px) {
     padding: 54px 85px 54px 85px;
-
     flex-wrap: wrap;
     justify-content: center;
-
     .footer {
       flex-wrap: wrap;
       justify-content: center;

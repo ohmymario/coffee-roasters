@@ -25,7 +25,6 @@ const HeroStyles = styled(HeroBaseStyles)`
         margin-bottom: 0.5em;
       }
       p {
-        font-size: 15px;
         max-width: 100%;
         margin-bottom: 2.7em;
       }

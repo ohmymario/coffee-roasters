@@ -79,9 +79,6 @@ const CollectionStyles = styled.div`
           max-width: 282px;
           margin-top: 0;
           text-align: start;
-          p {
-            font-size: 15px;
-          }
         }
       }
     }

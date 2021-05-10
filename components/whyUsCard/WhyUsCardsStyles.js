@@ -53,7 +53,6 @@ const WhyUsCardsStyles = styled.div`
         margin-right: 55px;
       }
       &-text {
-        font-size: 15px;
         line-height: 1.67;
         text-align: unset;
         h4 {
