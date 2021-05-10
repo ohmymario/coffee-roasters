@@ -85,6 +85,9 @@ const GlobalStyles = createGlobalStyle`
 
   p {
     margin: 0;
+    @media (max-width: 768px) {
+      font-size: 15px;
+    }
   }
 
   pre {
@@ -111,6 +114,7 @@ const GlobalStyles = createGlobalStyle`
       background: var(--btnDisabled);
     }
   }
+
 
 `;
 
