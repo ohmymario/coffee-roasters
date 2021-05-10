@@ -13,13 +13,6 @@ const FooterStyles = styled.footer`
     justify-content: space-between;
     max-width: 620px;
     flex: 1 1 auto;
-
-    ul {
-      /* needed for future */
-      a:hover {
-        color: var(--lightCreamBG);
-      }
-    }
   }
 
   .socials {
@@ -33,6 +26,21 @@ const FooterStyles = styled.footer`
       }
       &:not(:last-child) {
         margin-right: 1.5em;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 54px 85px 54px 85px;
+
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .footer {
+      flex-wrap: wrap;
+      justify-content: center;
+      .footer-logo {
+        margin-bottom: 16px;
       }
     }
   }
