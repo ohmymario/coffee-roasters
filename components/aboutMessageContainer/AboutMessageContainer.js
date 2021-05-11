@@ -45,6 +45,7 @@ const AboutMessageContainer = () => (
           and enjoyable.
         </p>
       </div>
+      {/* TODO: CHANGE IMAGE DEPENDING ON VIEW */}
       <div className="about-msg-image">
         <Image
           src="/images/image-quality.jpg"

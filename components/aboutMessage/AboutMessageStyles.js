@@ -1,24 +1,10 @@
 import styled from 'styled-components';
 
-// img 520 x 445
-// txt 450 x 340
-// max-space between ~ 125px!!!!
-// min space between 69px
-
-// total 1110 x 520
-// --darkGreyBlue: #333D4B;
-// 85px padding
-// take in props - alt, flip, wrap
-
-// docs example background: ${props => props.primary ? "palevioletred" : "white"};
-/* flex-wrap: ${props => (props.wrapping ? 'wrap' : 'nowrap')}; */
-
 const AboutMessageStyles = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 85px 0 85px;
-  /* change padding on smaller viewports */
   position: relative;
   margin-bottom: 10.5rem;
 
@@ -46,6 +32,7 @@ const AboutMessageStyles = styled.div`
       border-radius: 8px;
     }
   }
+
   .about-msg-message {
     max-width: 540px;
     margin-top: ${props => (props.bg ? '2.4em' : '0')};
@@ -59,6 +46,58 @@ const AboutMessageStyles = styled.div`
     p {
       color: ${props =>
         props.primary ? 'var(--darkGreyBlue)' : 'var(--lightCreamBG)'};
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 0;
+    flex-wrap: ${props => (props.wrapping ? 'wrap' : '')};
+    justify-content: ${props => (props.wrapping ? 'center' : '')};
+    margin-bottom: ${props => (props.bg ? '13.125rem' : '9rem')};
+
+    div[class*='about']:nth-child(1) {
+      margin: ${props => (props.wrapping ? '0' : '')};
+    }
+
+    div[class*='about']:nth-child(2) {
+      margin: ${props => (props.wrapping ? '0' : '')};
+      margin-bottom: ${props => (props.wrapping ? '64px' : '')};
+    }
+
+    .about-msg-background {
+      position: absolute;
+      width: 100%;
+      height: 488px;
+      border-radius: 10px;
+      top: 170px;
+      left: 0;
+      background: #2c343e;
+      z-index: -1;
+    }
+
+    .about-msg-image {
+      order: ${props => (props.wrapping ? '-1' : '')};
+      * {
+        max-width: ${props => (!props.wrapping ? '281px' : '573px')};
+        max-height: ${props => (!props.wrapping ? '470px' : '320px')};
+      }
+      img {
+        object-fit: cover;
+        border-radius: 8px;
+      }
+    }
+
+    .about-msg-message {
+      margin: ${props => (props.wrapping ? '0' : '')};
+      text-align: ${props => (props.wrapping ? 'center' : '')};
+      h2 {
+        font-size: 32px;
+        margin-bottom: ${props => (props.wrapping ? '0.75em' : '0.95em')};
+        line-height: 1.5;
+      }
+      p {
+        line-height: 1.667;
+      }
     }
   }
 `;
