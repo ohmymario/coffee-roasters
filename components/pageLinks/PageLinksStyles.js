@@ -3,7 +3,6 @@ import styled from 'styled-components';
 const PageLinksStyles = styled.ul`
   display: flex;
   padding: 0;
-  margin-bottom: 65px;
   a:hover {
     color: var(--lightCreamBG);
   }
@@ -16,6 +15,10 @@ const PageLinksStyles = styled.ul`
     &:not(:last-child) {
       padding-right: 2.85em;
     }
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 65px;
   }
 `;
 
