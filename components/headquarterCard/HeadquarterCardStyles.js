@@ -8,6 +8,7 @@ const HeadquarterCardStyles = styled.div`
   }
   .card-img {
     margin-bottom: 45px;
+    min-height: 60px;
   }
 
   h3 {
@@ -17,6 +18,23 @@ const HeadquarterCardStyles = styled.div`
   pre,
   p {
     color: var(--darkGreyBlue);
+  }
+
+  @media (max-width: 768px) {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 0.875em;
+    }
+
+    pre,
+    p {
+      font-size: 16px;
+      line-height: 1.625;
+    }
   }
 `;
 

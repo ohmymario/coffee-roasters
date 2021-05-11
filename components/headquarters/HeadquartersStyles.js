@@ -15,6 +15,10 @@ const HeadquartersStyles = styled.div`
     flex: 1 1 285px;
     /* will wrap in smaller viewports */
   }
+
+  @media (max-width: 768px) {
+    margin: 0 auto 7em auto;
+  }
 `;
 
 export default HeadquartersStyles;
