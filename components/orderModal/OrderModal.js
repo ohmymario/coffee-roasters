@@ -40,7 +40,6 @@ const OrderModal = props => {
     if (id === 'button') setOpen(false);
   };
 
-  console.log(props);
   return open
     ? ReactDOM.createPortal(
         <Overlay id="overlay" onClick={e => closeModal(e)}>
