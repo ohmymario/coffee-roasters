@@ -16,7 +16,6 @@ const HowItWorksStyles = styled.div`
   .cards-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-
     ${props => (props.primary ? `margin-bottom: 64px;` : `margin-bottom: 0`)};
     div:last-child .dot::after {
       display: none;
@@ -47,7 +46,7 @@ const HowItWorksStyles = styled.div`
 
     .bg {
       width: calc(100% + 64px);
-      height: calc(100% + 167px);
+      height: calc(100% + 193px);
       top: -97px;
       left: -32px;
     }
