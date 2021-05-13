@@ -22,6 +22,8 @@ const HowItWorks = props => {
       ) : (
         ''
       )}
+
+      {!primary ? <div className="bg" /> : ''}
     </HowItWorksStyles>
   );
 };
