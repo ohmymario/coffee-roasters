@@ -12,6 +12,14 @@ const QuestionContainerStyles = styled.div`
       text-align: end;
     }
   }
+
+  @media (max-width: 768px) {
+    padding: 0;
+
+    .selection {
+      display: none;
+    }
+  }
 `;
 
 export default QuestionContainerStyles;
