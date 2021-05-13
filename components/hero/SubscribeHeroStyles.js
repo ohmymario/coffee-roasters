@@ -16,6 +16,24 @@ const SubscribeHeroStyles = styled(HeroBaseStyles)`
       max-width: 85%;
     }
   }
+
+  @media (max-width: 768px) {
+    height: 400px;
+    margin-bottom: 9rem;
+
+    .hero-text {
+      width: 66%;
+      padding-left: 58px;
+
+      h1 {
+        font-size: 48px;
+      }
+
+      p {
+        max-width: 100%;
+      }
+    }
+  }
 `;
 
 export default SubscribeHeroStyles;
