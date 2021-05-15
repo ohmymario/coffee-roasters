@@ -6,7 +6,7 @@ const QuestionStyles = styled.div`
   margin-bottom: 5.5em;
 
   :nth-last-child(3) {
-    margin-bottom: ${props => (props.open ? '' : '0')};
+    margin-bottom: ${props => (props.open ? '' : '40px')};
   }
 
   .answer-container,
@@ -17,6 +17,7 @@ const QuestionStyles = styled.div`
 
   .question-container {
     margin-bottom: 3.5em;
+    /* padding: 0; */
     align-items: center;
     border: none;
     outline: none;
@@ -102,6 +103,10 @@ const QuestionStyles = styled.div`
 
   @media (max-width: 768px) {
     margin-bottom: 6.275em;
+
+    :nth-last-child(3) {
+      margin-bottom: ${props => (props.open ? '144px' : '40px')};
+    }
 
     .question-container {
       margin-bottom: 2.5em;
