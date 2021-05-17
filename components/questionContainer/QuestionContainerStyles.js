@@ -15,7 +15,7 @@ const QuestionContainerStyles = styled.div`
 
   @media (max-width: 768px) {
     padding: 0;
-    margin-bottom: 44px;
+    margin-bottom: 9em;
 
     .selection {
       display: none;
