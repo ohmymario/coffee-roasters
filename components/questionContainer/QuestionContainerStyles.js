@@ -20,6 +20,12 @@ const QuestionContainerStyles = styled.div`
     .selection {
       display: none;
     }
+
+    .question {
+      &-submit {
+        text-align: center;
+      }
+    }
   }
 `;
 
