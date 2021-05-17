@@ -35,6 +35,16 @@ const OrderModalStyles = styled.div`
       gap: 15px;
     }
   }
+
+  @media (max-width: 768px) {
+    .order {
+      &-summary {
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
 `;
 
 const Overlay = styled.div`
