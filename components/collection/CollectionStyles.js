@@ -54,10 +54,26 @@ const CollectionStyles = styled.div`
     }
   }
 
+  @media screen and (min-width: 769px) and (max-width: 1265px) {
+    .collection-lg-title {
+      font-size: clamp(6.5rem, 12vw, 9rem);
+    }
+    .collection-items {
+      justify-content: space-between;
+      .collection-item {
+        flex: 0 0 50%;
+        margin-bottom: 2.5rem;
+        .collection-text {
+          width: 50%;
+        }
+      }
+    }
+  }
+
   @media (max-width: 768px) {
     margin-bottom: 9rem;
     .collection-lg-title {
-      font-size: 6rem;
+      font-size: clamp(4.5rem, 12vw, 6rem);
     }
 
     .collection-items {
