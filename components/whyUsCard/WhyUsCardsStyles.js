@@ -31,6 +31,37 @@ const WhyUsCardsStyles = styled.div`
       }
     }
   }
+
+  @media screen and (min-width: 769px) and (max-width: 1160px) {
+    .whyus-card {
+      padding: 3em 2.2em 3em 2.2em;
+      margin: 0 10px 0 10px;
+
+      &-text {
+        h4 {
+          font-size: clamp(1.3rem, 2vw, 1.5rem);
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 970px) {
+    .whyus-card {
+      padding: 3em 1.5em 3em 1.5em;
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 970px) {
+    .whyus-card {
+      padding: 3em 1.5em 3em 1.5em;
+    }
+  }
+
+  /* @media (max-width: 900px) {
+    justify-content: center;
+    flex-direction: column;
+  } */
+
   @media (max-width: 768px) {
     justify-content: center;
     flex-direction: column;

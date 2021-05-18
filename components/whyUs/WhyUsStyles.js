@@ -37,6 +37,10 @@ const WhyUsStyles = styled.div`
     }
   }
 
+  @media screen and (min-width: 769px) and (max-width: 970px) {
+    padding: 100px 20px 0 20px;
+  }
+
   @media (max-width: 768px) {
     padding: 56px 58px 0 58px;
     .whyus-text {
