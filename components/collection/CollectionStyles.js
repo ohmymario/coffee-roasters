@@ -14,7 +14,7 @@ const CollectionStyles = styled.div`
     font-size: 9.375rem;
     line-height: normal;
 
-    background: linear-gradient(180deg, var(--grey) 0%, #ffffff 80%);
+    background: linear-gradient(180deg, var(--grey) 0%, #ffffff 85%);
     background-size: 100%;
 
     -webkit-background-clip: text;
