@@ -15,6 +15,15 @@ const HeroStyles = styled(HeroBaseStyles)`
     }
   }
 
+  @media screen and (min-width: 769px) and (max-width: 1220px) {
+    .hero-text {
+      width: 60%;
+      h1 {
+        font-size: clamp(3.5rem, 5.75vw, 4.5rem);
+      }
+    }
+  }
+
   @media (max-width: 768px) {
     height: 500px;
 
