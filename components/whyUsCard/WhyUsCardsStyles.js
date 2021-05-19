@@ -45,24 +45,13 @@ const WhyUsCardsStyles = styled.div`
     }
   }
 
-  @media screen and (min-width: 769px) and (max-width: 970px) {
+  @media screen and (min-width: 901px) and (max-width: 970px) {
     .whyus-card {
       padding: 3em 1.5em 3em 1.5em;
     }
   }
 
-  @media screen and (min-width: 769px) and (max-width: 970px) {
-    .whyus-card {
-      padding: 3em 1.5em 3em 1.5em;
-    }
-  }
-
-  /* @media (max-width: 900px) {
-    justify-content: center;
-    flex-direction: column;
-  } */
-
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     justify-content: center;
     flex-direction: column;
     margin-bottom: 144px;
@@ -72,9 +61,9 @@ const WhyUsCardsStyles = styled.div`
       padding: 2.5em 3em 2.5em 4.4em;
       margin: 0;
       margin-bottom: 1.5em;
-
       &-icon {
         padding-top: 5px;
+        max-width: 56px;
         * {
           max-height: 56px;
         }

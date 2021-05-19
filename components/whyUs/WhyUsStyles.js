@@ -37,8 +37,12 @@ const WhyUsStyles = styled.div`
     }
   }
 
-  @media screen and (min-width: 769px) and (max-width: 970px) {
+  @media screen and (min-width: 801px) and (max-width: 970px) {
     padding: 100px 20px 0 20px;
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 900px) {
+    padding: 100px 45px 0 45px;
   }
 
   @media (max-width: 768px) {
