@@ -62,7 +62,7 @@ const CollectionStyles = styled.div`
       justify-content: space-between;
       .collection-item {
         flex: 0 0 50%;
-        margin-bottom: 2.5rem;
+        margin-bottom: 5.5rem;
         .collection-text {
           width: 50%;
         }
