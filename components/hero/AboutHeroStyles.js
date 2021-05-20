@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 import HeroBaseStyles from '../styles/HeroBaseStyles';
 
-// 689x400
-
 const AboutHeroStyles = styled(HeroBaseStyles)`
   height: 450px;
   margin-bottom: 10.5rem;
@@ -12,6 +10,17 @@ const AboutHeroStyles = styled(HeroBaseStyles)`
 
     h2 {
       margin-bottom: 0.6em;
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1100px) {
+    margin-bottom: 7rem;
+
+    .hero-text {
+      width: 68%;
+      h2 {
+        font-size: clamp(2rem, 4.5vw, 2.5rem);
+      }
     }
   }
 
