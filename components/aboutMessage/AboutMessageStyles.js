@@ -49,7 +49,25 @@ const AboutMessageStyles = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
+  @media screen and (min-width: 769px) and (max-width: 1250px) {
+    .about-msg-message {
+      margin-top: ${props => (props.bg ? '15%' : '0')};
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1100px) {
+    div[class*='about']:nth-child(1) {
+      margin-right: 0;
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1040px) {
+    .about-msg-message {
+      margin-top: ${props => (props.bg ? '20%' : '0')};
+    }
+  }
+
+  @media (max-width: 990px) {
     padding: 0;
     flex-wrap: ${props => (props.wrapping ? 'wrap' : '')};
     justify-content: ${props => (props.wrapping ? 'center' : '')};
