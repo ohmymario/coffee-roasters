@@ -30,6 +30,32 @@ const FooterStyles = styled.footer`
     }
   }
 
+  @media screen and (min-width: 769px) and (max-width: 1035px) {
+    .footer-logo {
+      padding-right: 20px;
+    }
+    .footer {
+      padding-right: 25px;
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 920px) {
+    padding: 0 25px 0 25px;
+
+    .footer {
+      justify-content: space-between;
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 805px) {
+    .footer {
+      justify-content: space-around;
+    }
+    ul {
+      flex-direction: column;
+    }
+  }
+
   @media (max-width: 768px) {
     padding: 54px 85px 54px 85px;
     flex-wrap: wrap;
