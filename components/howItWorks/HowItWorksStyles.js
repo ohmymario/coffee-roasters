@@ -33,6 +33,11 @@ const HowItWorksStyles = styled.div`
     z-index: -1;
   }
 
+  @media screen and (min-width: 769px) and (max-width: 980px) {
+    ${props =>
+      props.primary ? `padding: 0 0 0 0` : `padding: 91px 0 107px 0`};
+  }
+
   @media (max-width: 768px) {
     padding: 0;
     margin: 0 auto ${props => (props.primary ? `144px` : `159px`)} auto;

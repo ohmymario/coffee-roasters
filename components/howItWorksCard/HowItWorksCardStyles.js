@@ -42,6 +42,23 @@ const HowItWorksCardStyles = styled.div`
     }
   }
 
+  @media screen and (min-width: 769px) and (max-width: 1210px) {
+    padding-right: 25px;
+
+    .card {
+      h3,
+      p {
+        width: 95%;
+        min-width: unset;
+      }
+
+      h3 {
+        font-size: clamp(1.75rem, 4vw, 2rem);
+        min-height: 72px;
+      }
+    }
+  }
+
   @media (max-width: 768px) {
     padding-right: 18px;
     .dot {
