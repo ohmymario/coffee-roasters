@@ -30,7 +30,7 @@ const HeroStyles = styled(HeroBaseStyles)`
     .hero-text {
       width: 70%;
       h1 {
-        font-size: 48px;
+        font-size: 3rem;
         margin-bottom: 0.5em;
       }
       p {
