@@ -20,6 +20,18 @@ const HeadquarterCardStyles = styled.div`
     color: var(--darkGreyBlue);
   }
 
+  @media screen and (min-width: 769px) and (max-width: 1070px) {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 916px) {
+    h3 {
+      min-height: 72px;
+    }
+  }
+
   @media (max-width: 768px) {
     &:not(:last-child) {
       margin-right: 10px;
