@@ -17,7 +17,6 @@ const QuestionStyles = styled.div`
 
   .question-container {
     margin-bottom: 3.5em;
-    /* padding: 0; */
     align-items: center;
     border: none;
     outline: none;
@@ -36,6 +35,8 @@ const QuestionStyles = styled.div`
 
     h2 {
       color: var(--grey);
+      text-align: start;
+      padding-right: 10px;
     }
 
     img {
@@ -97,6 +98,15 @@ const QuestionStyles = styled.div`
 
       h4 {
         margin-bottom: 1em;
+      }
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1275px) {
+    .question-container {
+      margin-bottom: 2.5em;
+      h2 {
+        font-size: clamp(32px, 3vw, 40px);
       }
     }
   }
