@@ -59,6 +59,14 @@ const HowItWorksCardStyles = styled.div`
     }
   }
 
+  @media screen and (min-width: 769px) and (max-width: 791px) {
+    .card {
+      h3 {
+        min-height: 105px;
+      }
+    }
+  }
+
   @media (max-width: 768px) {
     padding-right: 18px;
     .dot {

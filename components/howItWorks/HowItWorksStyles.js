@@ -33,9 +33,18 @@ const HowItWorksStyles = styled.div`
     z-index: -1;
   }
 
+  @media screen and (min-width: 769px) and (max-width: 1250px) {
+    margin: 0 auto ${props => (props.primary ? `200px` : `60px`)} auto;
+  }
+
   @media screen and (min-width: 769px) and (max-width: 980px) {
     ${props =>
-      props.primary ? `padding: 0 0 0 0` : `padding: 91px 0 107px 0`};
+      props.primary ? `padding: 0 0 0 0` : `padding: 91px 45px 107px 45px`};
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 900px) {
+    ${props =>
+      props.primary ? `padding: 0 0 0 0` : `padding: 71px 45px 87px 45px`};
   }
 
   @media (max-width: 768px) {
