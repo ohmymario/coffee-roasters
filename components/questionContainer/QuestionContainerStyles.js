@@ -5,7 +5,6 @@ const QuestionContainerStyles = styled.div`
   justify-content: space-between;
   padding: 85px;
   max-width: 1280px;
-  border: 1px solid red;
 
   .question {
     flex: 0 1 730px;
@@ -19,6 +18,14 @@ const QuestionContainerStyles = styled.div`
 
     .selection {
       padding-right: 40px;
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 905px) {
+    padding: 85px 0 85px 0;
+
+    .selection {
+      padding-right: 20px;
     }
   }
 

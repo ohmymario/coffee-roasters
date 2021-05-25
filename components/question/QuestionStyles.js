@@ -84,7 +84,6 @@ const QuestionStyles = styled.div`
         :hover,
         :focus-visible,
         :active {
-          /* TODO: MODIFY WITH LIGHTEN RATHER THAN HARDCODED VALUE */
           background: #11a29f;
         }
         > * {
@@ -107,6 +106,28 @@ const QuestionStyles = styled.div`
       margin-bottom: 2.5em;
       h2 {
         font-size: clamp(32px, 3vw, 40px);
+      }
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1050px) {
+    .answer-container {
+      gap: 10px;
+      button {
+        padding: 32px 22px 54px 22px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 905px) {
+    .answer-container {
+      gap: 10px;
+
+      button {
+        padding: 22px 15px 34px 15px;
+        h4 {
+          font-size: 20px;
+        }
       }
     }
   }
