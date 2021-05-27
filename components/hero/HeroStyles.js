@@ -24,18 +24,42 @@ const HeroStyles = styled(HeroBaseStyles)`
     }
   }
 
-  @media (max-width: 768px) {
-    height: 500px;
-
+  @media screen and (min-width: 501px) and (max-width: 768px) {
     .hero-text {
       width: 70%;
-      h1 {
-        font-size: 3rem;
-        margin-bottom: 0.5em;
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: 500px;
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5em;
+    }
+    p {
+      max-width: 100%;
+      margin-bottom: 2.7em;
+    }
+  }
+
+  @media (max-width: 500px) {
+    margin-bottom: 7.5rem;
+    .hero-image {
+      filter: brightness(60%);
+    }
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 24px;
+      width: 100%;
+      h1,
+      p {
+        text-align: center;
       }
       p {
-        max-width: 100%;
-        margin-bottom: 2.7em;
+        margin-bottom: 2.6em;
       }
     }
   }
