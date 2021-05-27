@@ -6,10 +6,14 @@ import Footer from '../footer/Footer';
 const InnerStyles = styled.div`
   max-width: var(--maxWidth);
   margin: 0 auto;
+  padding: 1.5rem;
   @media (max-width: 768px) {
     padding: 2rem;
   }
-  padding: 1.5rem;
+
+  @media (max-width: 500px) {
+    padding: 2rem 1.5rem;
+  }
 `;
 
 const Page = props => {
