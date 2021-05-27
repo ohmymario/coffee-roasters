@@ -70,7 +70,7 @@ const CollectionStyles = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
+  @media screen and (min-width: 501px) and (max-width: 768px) {
     margin-bottom: 9rem;
     .collection-lg-title {
       font-size: clamp(4.5rem, 12vw, 6rem);
@@ -95,6 +95,42 @@ const CollectionStyles = styled.div`
           max-width: 282px;
           margin-top: 0;
           text-align: start;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    margin-bottom: 7.5rem;
+    .collection-lg-title {
+      font-size: 2.5rem;
+      font-size: 3.5rem;
+
+      background: linear-gradient(180deg, var(--grey) 0%, #ffffff 95%);
+      background-size: 100%;
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+    }
+
+    .collection-items {
+      margin-top: 40px;
+      padding: 0;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      justify-content: space-between;
+      .collection-item {
+        flex: 0 0 auto;
+        margin-bottom: 3.2rem;
+
+        .collection-text {
+          margin-top: 1.5rem;
+          width: 60%;
+          h4 {
+            margin-bottom: 0.675em;
+          }
         }
       }
     }
