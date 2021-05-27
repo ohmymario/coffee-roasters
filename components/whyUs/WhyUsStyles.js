@@ -45,11 +45,34 @@ const WhyUsStyles = styled.div`
     padding: 100px 45px 0 45px;
   }
 
-  @media (max-width: 768px) {
+  @media screen and (min-width: 501px) and (max-width: 768px) {
     padding: 56px 58px 0 58px;
     .whyus-text {
       h2 {
         font-size: 32px;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    padding: 64px 24px 0 24px;
+    .whyus-background {
+      height: 900px;
+    }
+
+    .whyus-text {
+      width: unset;
+      text-align: center;
+      color: var(--lightCreamBG);
+      margin-bottom: 49px;
+      h2 {
+        color: inherit;
+        margin-bottom: 0.8em;
+        font-size: 1.75rem;
+      }
+      p {
+        opacity: 0.8;
+        padding: 0 10px 1em 10px;
       }
     }
   }

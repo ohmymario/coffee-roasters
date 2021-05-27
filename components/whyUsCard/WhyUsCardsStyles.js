@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const WhyUsCardsStyles = styled.div`
   display: flex;
-  margin-bottom: 200px;
+  margin-bottom: 12.5rem;
   .whyus-card {
     background: var(--darkCyan);
     color: var(--lightCreamBG);
@@ -51,10 +51,10 @@ const WhyUsCardsStyles = styled.div`
     }
   }
 
-  @media (max-width: 900px) {
+  @media screen and (min-width: 501px) and (max-width: 900px) {
     justify-content: center;
     flex-direction: column;
-    margin-bottom: 144px;
+    margin-bottom: 9rem;
     .whyus-card {
       width: 100%;
       flex-direction: row;
@@ -77,6 +77,33 @@ const WhyUsCardsStyles = styled.div`
         text-align: unset;
         h4 {
           margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 7.5rem;
+    .whyus-card {
+      width: 100%;
+      padding: 4.5em 12px 2.5em 12px;
+      margin: 0;
+      margin-bottom: 1.5em;
+      &-icon {
+        margin-bottom: 46px;
+        * {
+        }
+      }
+      &-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        p {
+          width: 78%;
         }
       }
     }
