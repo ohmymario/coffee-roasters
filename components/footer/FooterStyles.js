@@ -56,7 +56,7 @@ const FooterStyles = styled.footer`
     }
   }
 
-  @media (max-width: 768px) {
+  @media screen and (min-width: 501px) and (max-width: 768px) {
     padding: 54px 85px 54px 85px;
     flex-wrap: wrap;
     justify-content: center;
@@ -65,6 +65,31 @@ const FooterStyles = styled.footer`
       justify-content: center;
       .footer-logo {
         margin-bottom: 16px;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    padding: 54px 0;
+    flex-direction: column;
+
+    .footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .footer-logo {
+        margin-bottom: 3.125rem;
+      }
+    }
+    ul {
+      flex-direction: column;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 3rem;
+      li:not(:last-child) {
+        margin-bottom: 1.5rem;
+        padding-right: 0;
       }
     }
   }
