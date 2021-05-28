@@ -47,7 +47,7 @@ const HowItWorksStyles = styled.div`
       props.primary ? `padding: 0 0 0 0` : `padding: 71px 45px 87px 45px`};
   }
 
-  @media (max-width: 768px) {
+  @media screen and (min-width: 501px) and (max-width: 768px) {
     padding: 0;
     margin: 0 auto ${props => (props.primary ? `144px` : `159px`)} auto;
     margin-top: 241px;
@@ -63,6 +63,25 @@ const HowItWorksStyles = styled.div`
       height: calc(100% + 193px);
       top: -97px;
       left: -32px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0 auto ${props => (props.primary ? `120px` : `159px`)} auto;
+
+    h4 {
+      text-align: center;
+    }
+    .cards-container {
+      display: flex;
+      flex-direction: column;
+      ${props => (props.primary ? `margin-bottom: 18px;` : `margin-bottom: 0`)};
+    }
+    button {
+      margin: 5px auto;
     }
   }
 `;

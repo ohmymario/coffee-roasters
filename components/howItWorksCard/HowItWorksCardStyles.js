@@ -67,7 +67,7 @@ const HowItWorksCardStyles = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
+  @media screen and (min-width: 501px) and (max-width: 768px) {
     padding-right: 18px;
     .dot {
       margin-bottom: 48px;
@@ -84,6 +84,32 @@ const HowItWorksCardStyles = styled.div`
       }
       h3 {
         font-size: 28px;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    margin-bottom: 3.5rem;
+    .dot {
+      display: none;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h1,
+      h3 {
+        margin-bottom: 1.5rem;
+      }
+      h3,
+      p {
+        width: 100%;
+        text-align: center;
+      }
+      p {
+        width: 95%;
+        text-align: center;
       }
     }
   }
