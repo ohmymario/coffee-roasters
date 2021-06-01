@@ -16,7 +16,7 @@ const AboutMessageContainer = () => (
         />
       </div>
       <div className="about-msg-message">
-        <h2>Our Commitment</h2>
+        <h2>Our commitment</h2>
         <p>
           We’re built on a simple mission and a commitment to doing good along
           the way. We want to make it easy for you to discover and brew the
