@@ -67,7 +67,7 @@ const AboutMessageStyles = styled.div`
     }
   }
 
-  @media (max-width: 990px) {
+  @media screen and (min-width: 501px) and (max-width: 990px) {
     padding: 0;
     flex-wrap: ${props => (props.wrapping ? 'wrap' : '')};
     justify-content: ${props => (props.wrapping ? 'center' : '')};
@@ -112,6 +112,56 @@ const AboutMessageStyles = styled.div`
         font-size: 32px;
         margin-bottom: ${props => (props.wrapping ? '0.75em' : '0.95em')};
         line-height: 1.5;
+      }
+      p {
+        line-height: 1.667;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    margin-bottom: 7.5rem;
+    flex-wrap: ${props => (props.wrapping ? 'wrap' : '')};
+    flex-direction: ${props => (props.wrapping ? '' : 'column')};
+    padding: ${props => (props.primary ? '0' : '0 24px')};
+
+    div[class*='about']:nth-child(1) {
+      margin: 0;
+      margin-bottom: ${props => (props.wrapping ? '4rem' : '3rem')};
+    }
+
+    div[class*='about']:nth-child(2) {
+      margin: 0;
+      margin: ${props => (props.wrapping ? '0 auto 64px auto' : '')};
+      text-align: center;
+    }
+
+    .about-msg-background {
+      height: 450px;
+    }
+
+    .about-msg-image {
+      width: 100%;
+      order: ${props => (props.wrapping ? '-1' : '')};
+      * {
+        max-width: 100%;
+        max-height: ${props => (!props.wrapping ? '400px' : '156px')};
+        object-position: ${props => (!props.wrapping ? 'top' : '50% 88%')};
+      }
+      img {
+        object-fit: cover;
+        border-radius: 8px;
+      }
+    }
+
+    .about-msg-message {
+      text-align: center;
+      h2 {
+        font-size: ${props => (props.primary ? '32px' : '28px')};
+
+        margin-bottom: 1em;
+        line-height: 1.5;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       }
       p {
         line-height: 1.667;
