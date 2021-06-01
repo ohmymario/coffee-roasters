@@ -24,10 +24,8 @@ const AboutHeroStyles = styled(HeroBaseStyles)`
     }
   }
 
-  @media (max-width: 768px) {
-    height: 400px;
+  @media screen and (min-width: 501px) and (max-width: 768px) {
     margin-bottom: 9rem;
-
     .hero-text {
       width: 66%;
       padding-left: 58px;
@@ -38,6 +36,37 @@ const AboutHeroStyles = styled(HeroBaseStyles)`
       }
       p {
         max-width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: 400px;
+  }
+
+  @media (max-width: 500px) {
+    margin-bottom: 7.5rem;
+
+    padding: 111px 24px 87px 24px;
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      h2,
+      p {
+        text-align: center;
+      }
+      h2 {
+        /* font-size: 1.75rem; */
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+      p {
+        max-width: 100%;
+        opacity: 80%;
       }
     }
   }
