@@ -4,8 +4,6 @@ import { headquartersData } from './HeadquartersData';
 
 import HeadquarterCard from '../headquarterCard/HeadquarterCard';
 
-// whole component 1045 x 366
-
 const Headquarters = () => (
   <HeadquartersStyles>
     <h4>Our headquarters</h4>

@@ -13,11 +13,22 @@ const HeadquartersStyles = styled.div`
     display: flex;
     flex-wrap: nowrap;
     flex: 1 1 285px;
-    /* will wrap in smaller viewports */
   }
 
-  @media (max-width: 768px) {
+  @media screen and (min-width: 501px) and (max-width: 768px) {
     margin: 0 auto 7em auto;
+  }
+
+  @media (max-width: 500px) {
+    margin: 0 auto 7.5em auto;
+    h4 {
+      text-align: center;
+    }
+    .hq-cards {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
 `;
 

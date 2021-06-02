@@ -32,13 +32,18 @@ const HeadquarterCardStyles = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
+  @media screen and (min-width: 501px) and (max-width: 768px) {
     &:not(:last-child) {
       margin-right: 10px;
     }
 
     h3 {
       font-size: 24px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    h3 {
       margin-bottom: 0.875em;
     }
 
@@ -46,6 +51,25 @@ const HeadquarterCardStyles = styled.div`
     p {
       font-size: 16px;
       line-height: 1.625;
+    }
+  }
+
+  @media (max-width: 500px) {
+    margin-bottom: 5em;
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    h3 {
+      font-size: 28px;
+    }
+
+    * {
+      text-align: center;
     }
   }
 `;
