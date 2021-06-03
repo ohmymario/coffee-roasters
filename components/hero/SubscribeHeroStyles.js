@@ -26,7 +26,7 @@ const SubscribeHeroStyles = styled(HeroBaseStyles)`
     }
   }
 
-  @media (max-width: 768px) {
+  @media screen and (min-width: 501px) and (max-width: 768px) {
     height: 400px;
     margin-bottom: 9rem;
 
@@ -40,6 +40,46 @@ const SubscribeHeroStyles = styled(HeroBaseStyles)`
 
       p {
         max-width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    height: 400px;
+    align-items: flex-start;
+    margin-bottom: 7.5rem;
+    padding: 0 24px;
+
+    .hero-image {
+      filter: brightness(51%);
+    }
+
+    .hero-text {
+      width: 100%;
+      padding-left: 0;
+      margin: auto 0;
+
+      h1 {
+        font-size: 2.75rem;
+      }
+
+      p {
+        max-width: 100%;
+        opacity: 80%;
+      }
+
+      * {
+        text-align: center;
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
+    .hero-text {
+      margin: 100px 0 0 auto;
+
+      h1 {
+        font-size: 2.5rem;
       }
     }
   }
