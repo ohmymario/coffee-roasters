@@ -90,6 +90,9 @@ const HowItWorksCardStyles = styled.div`
 
   @media (max-width: 500px) {
     margin-bottom: 3.5rem;
+    &:last-child {
+      margin-bottom: ${props => (props.primary ? '' : '0')};
+    }
     .dot {
       display: none;
     }
@@ -98,6 +101,10 @@ const HowItWorksCardStyles = styled.div`
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
+      h3 {
+        font-size: ${props => (props.primary ? '' : '28px')};
+      }
       h1,
       h3 {
         margin-bottom: 1.5rem;

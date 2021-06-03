@@ -70,7 +70,8 @@ const HowItWorksStyles = styled.div`
     display: flex;
     flex-direction: column;
     padding: 0;
-    margin: 0 auto ${props => (props.primary ? `120px` : `159px`)} auto;
+    padding: ${props => (props.primary ? '0' : '80px 0')};
+    margin: 0 auto 120px auto;
 
     h4 {
       text-align: center;
@@ -82,6 +83,11 @@ const HowItWorksStyles = styled.div`
     }
     button {
       margin: 5px auto;
+    }
+
+    .bg {
+      width: calc(100% + 48px);
+      left: -24px;
     }
   }
 `;
