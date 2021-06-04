@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-// 689 x 208
-
 const OrderSummaryStyles = styled.div`
   width: 100%;
   background: #2c343e;
@@ -23,14 +21,20 @@ const OrderSummaryStyles = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
+  @media screen and (min-width: 501px) and (max-width: 768px) {
     padding: 27px 44px 27px 44px;
+    margin-bottom: 2.5em;
+  }
 
+  @media (max-width: 768px) {
     .order-title {
       font-size: 16px;
     }
+  }
 
-    margin-bottom: 2.5em;
+  @media (max-width: 500px) {
+    padding: 32px 24px;
+    margin-bottom: 3.2em;
   }
 `;
 
