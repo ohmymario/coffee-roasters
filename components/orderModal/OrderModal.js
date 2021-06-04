@@ -16,9 +16,9 @@ const OrderModal = props => {
         <>
           “I drink my coffee using
           <span> {checkForAnswer('Preferences')}s</span>, with a
-          <span> {checkForAnswer('Bean Type')} </span> type of bean.
-          <span> {checkForAnswer('Quantity')} </span> , sent to me
-          <span> {checkForAnswer('Deliveries')} </span>.”
+          <span> {checkForAnswer('Bean Type')}</span> type of bean.
+          <span> {checkForAnswer('Quantity')}</span> , sent to me
+          <span> {checkForAnswer('Deliveries')}</span>.”
         </>
       );
     }
@@ -26,11 +26,11 @@ const OrderModal = props => {
     return (
       <>
         “I drink my coffee as
-        <span> {checkForAnswer('Preferences')} </span>, with a
-        <span> {checkForAnswer('Bean Type')} </span> type of bean.
-        <span> {checkForAnswer('Quantity')} </span> ground ala
-        <span> {checkForAnswer('Grind Option')} </span>, sent to me
-        <span> {checkForAnswer('Deliveries')} </span>.”
+        <span> {checkForAnswer('Preferences')}</span>, with a
+        <span> {checkForAnswer('Bean Type')}</span> type of bean.
+        <span> {checkForAnswer('Quantity')}</span> ground ala
+        <span> {checkForAnswer('Grind Option')}</span>, sent to me
+        <span> {checkForAnswer('Deliveries')}</span>.”
       </>
     );
   };
