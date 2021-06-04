@@ -132,7 +132,7 @@ const QuestionStyles = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
+  @media screen and (min-width: 501px) and (max-width: 768px) {
     margin-bottom: 6.275em;
 
     :nth-last-child(3) {
@@ -151,6 +151,40 @@ const QuestionStyles = styled.div`
       button {
         p {
           font-size: 16px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    margin-bottom: ${props => (props.open ? '96px' : '2.75em')};
+
+    :nth-last-child(3) {
+      margin-bottom: ${props => (props.open ? '120px' : '2.75em')};
+    }
+
+    .question-container {
+      margin-bottom: 2em;
+      padding: 0;
+      h2 {
+        font-size: 1.5rem;
+        padding-right: 60px;
+      }
+      div {
+        flex-shrink: 0;
+      }
+    }
+    .answer-container {
+      flex-direction: column;
+      gap: 1rem;
+      button {
+        padding: 24px;
+        min-height: 140px;
+        h4 {
+          margin-bottom: 8px;
+        }
+        p {
+          font-size: 1rem;
         }
       }
     }
