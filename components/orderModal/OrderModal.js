@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import useWindowDimensions from '../../hooks/useWindowSize';
 import { OrderModalStyles, Overlay } from './OrderModalStyles';
 
 const OrderModal = props => {
   const { open, setOpen, answers } = props;
+  const { width } = useWindowDimensions();
 
   const checkForAnswer = search => {
     if (answers[search]) return answers[search];
@@ -34,6 +36,9 @@ const OrderModal = props => {
       </>
     );
   };
+
+  const checkoutMsg = () =>
+    width <= 500 ? 'Checkout - $14.00 / mo' : 'Checkout';
 
   const closeModal = ({ target: { id } }) => {
     if (id === 'overlay') setOpen(false);
@@ -66,7 +71,7 @@ const OrderModal = props => {
                   id="button"
                   onClick={e => closeModal(e)}
                 >
-                  Checkout
+                  {checkoutMsg()}
                 </button>
               </div>
             </div>

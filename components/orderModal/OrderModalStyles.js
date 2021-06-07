@@ -49,6 +49,8 @@ const OrderModalStyles = styled.div`
   }
 
   @media (max-width: 500px) {
+    margin: 35px 24px;
+
     .title-bg {
       .title {
         padding: 28px 0 28px 24px;
@@ -61,9 +63,10 @@ const OrderModalStyles = styled.div`
     .order {
       padding: 40px 24px 24px 24px;
       &-summary {
-        margin-bottom: 1em;
+        margin-bottom: 1.5em;
         h4 {
           margin-bottom: 0;
+          line-height: 1.66;
         }
       }
       &-checkout {
