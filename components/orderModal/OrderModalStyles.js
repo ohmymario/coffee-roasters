@@ -24,6 +24,7 @@ const OrderModalStyles = styled.div`
       margin-bottom: 47px;
       h4 {
         margin-bottom: 7px;
+        color: var(--grey);
         span {
           color: var(--darkCyan);
         }
@@ -36,11 +37,41 @@ const OrderModalStyles = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
+  /* TODO: revisit tablet view */
+  @media screen and (min-width: 501px) and (max-width: 768px) {
     .order {
       &-summary {
         p {
           font-size: 16px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    .title-bg {
+      .title {
+        padding: 28px 0 28px 24px;
+        h2 {
+          color: #ffffff;
+          font-size: 28px;
+        }
+      }
+    }
+    .order {
+      padding: 40px 24px 24px 24px;
+      &-summary {
+        margin-bottom: 1em;
+        h4 {
+          margin-bottom: 0;
+        }
+      }
+      &-checkout {
+        h3 {
+          display: none;
+        }
+        button {
+          width: 100%;
         }
       }
     }
