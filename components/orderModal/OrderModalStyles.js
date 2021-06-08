@@ -37,7 +37,6 @@ const OrderModalStyles = styled.div`
     }
   }
 
-  /* TODO: revisit tablet view */
   @media screen and (min-width: 501px) and (max-width: 768px) {
     .order {
       &-summary {
