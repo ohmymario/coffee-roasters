@@ -10,6 +10,7 @@ const HeaderStyles = styled.header`
   width: ${props => (props.open ? 'calc(100% - 48px);' : '')};
 
   .mobNav-Container {
+    display: none;
     button {
       border: none;
       background: none;
@@ -19,6 +20,18 @@ const HeaderStyles = styled.header`
 
   @media (max-width: 768px) {
     margin-bottom: 10px;
+  }
+
+  @media (max-width: 605px) {
+    margin-bottom: 10px;
+
+    .mobNav-Container {
+      display: block;
+    }
+
+    nav {
+      display: none;
+    }
   }
 `;
 

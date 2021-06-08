@@ -20,6 +20,14 @@ const PageLinksStyles = styled.ul`
   @media (max-width: 768px) {
     margin-bottom: 65px;
   }
+
+  @media (max-width: 630px) {
+    li {
+      &:not(:last-child) {
+        padding-right: 2em;
+      }
+    }
+  }
 `;
 
 export default PageLinksStyles;
