@@ -21,7 +21,7 @@ export const collectionData = [
   {
     width: 234,
     height: 177,
-    src: '/images/coffee/image-Piccollo.png',
+    src: '/images/coffee/image-piccollo.png',
     alt: 'Piccollo Coffee',
     name: 'Piccollo',
     desc:
