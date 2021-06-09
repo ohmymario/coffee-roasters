@@ -137,7 +137,7 @@ const AboutMessageStyles = styled.div`
     }
 
     .about-msg-background {
-      height: 450px;
+      height: 500px;
     }
 
     .about-msg-image {
