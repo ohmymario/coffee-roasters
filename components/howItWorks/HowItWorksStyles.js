@@ -22,6 +22,12 @@ const HowItWorksStyles = styled.div`
     }
   }
 
+  button {
+    a {
+      color: inherit;
+    }
+  }
+
   .bg {
     position: absolute;
     border-radius: 10px;

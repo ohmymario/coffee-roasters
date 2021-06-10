@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import HowItWorksStyles from './HowItWorksStyles';
 import { HowItWorksData } from './HowItWorksData';
 import HowItWorksCard from '../howItWorksCard/HowItWorksCard';
@@ -17,7 +18,9 @@ const HowItWorks = props => {
 
       {primary ? (
         <button className="button" type="button">
-          Create your plan
+          <Link href="/subscribe">
+            <a>Create your plan</a>
+          </Link>
         </button>
       ) : (
         ''
