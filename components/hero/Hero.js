@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import HeroStyles from './HeroStyles';
 
@@ -21,7 +22,9 @@ const Hero = () => (
         your door, at your schedule.
       </p>
       <button className="button" type="button">
-        Create your plan
+        <Link href="/subscribe">
+          <a>Create your plan</a>
+        </Link>
       </button>
     </div>
   </HeroStyles>

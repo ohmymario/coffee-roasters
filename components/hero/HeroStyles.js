@@ -13,7 +13,14 @@ const HeroStyles = styled(HeroBaseStyles)`
       opacity: 80%;
       margin-bottom: 3.1875em;
     }
+    button {
+      a {
+        color: inherit;
+      }
+    }
   }
+
+  /* TODO: REVISIT MEDIA QUERIES FOR 750PX ~~~ */
 
   @media screen and (min-width: 769px) and (max-width: 1220px) {
     .hero-text {
@@ -42,11 +49,7 @@ const HeroStyles = styled(HeroBaseStyles)`
     }
   }
 
-  @media (max-width: 500px) {
-    margin-bottom: 7.5rem;
-    .hero-image {
-      filter: brightness(60%);
-    }
+  @media (max-width: 670px) {
     .hero-text {
       display: flex;
       flex-direction: column;
@@ -61,6 +64,13 @@ const HeroStyles = styled(HeroBaseStyles)`
       p {
         margin-bottom: 2.6em;
       }
+    }
+  }
+
+  @media (max-width: 500px) {
+    margin-bottom: 7.5rem;
+    .hero-image {
+      filter: brightness(60%);
     }
   }
 `;
