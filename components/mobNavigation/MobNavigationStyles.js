@@ -7,7 +7,7 @@ const MobNavigationStyles = styled.ul`
   overflow: hidden;
   text-align: center;
   li {
-    margin-bottom: 2em;
+    padding: 1em 0;
     a {
       font-size: 24px;
       color: var(--darkGreyBlue);
