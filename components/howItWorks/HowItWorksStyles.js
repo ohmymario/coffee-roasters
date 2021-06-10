@@ -56,7 +56,7 @@ const HowItWorksStyles = styled.div`
   @media screen and (min-width: 501px) and (max-width: 768px) {
     padding: 0;
     margin: 0 auto ${props => (props.primary ? `144px` : `159px`)} auto;
-    margin-top: 241px;
+    margin-top: ${props => (props.primary ? `` : `241px`)};
     h4 {
       margin-bottom: 1.7em;
     }
