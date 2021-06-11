@@ -20,8 +20,6 @@ const HeroStyles = styled(HeroBaseStyles)`
     }
   }
 
-  /* TODO: REVISIT MEDIA QUERIES FOR 750PX ~~~ */
-
   @media screen and (min-width: 769px) and (max-width: 1220px) {
     .hero-text {
       width: 60%;
