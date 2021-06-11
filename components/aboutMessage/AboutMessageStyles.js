@@ -119,6 +119,16 @@ const AboutMessageStyles = styled.div`
     }
   }
 
+  @media (max-width: 735px) {
+    div[class*='about']:nth-child(1) {
+      margin-right: 10px;
+    }
+
+    div[class*='about']:nth-child(2) {
+      margin-left: 10px;
+    }
+  }
+
   @media (max-width: 500px) {
     margin-bottom: 7.5rem;
     flex-wrap: ${props => (props.wrapping ? 'wrap' : '')};
