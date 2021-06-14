@@ -5,6 +5,7 @@ const WhyUsStyles = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 12.5rem;
 
   padding: 100px 70px 0 70px;
 
@@ -43,9 +44,11 @@ const WhyUsStyles = styled.div`
 
   @media screen and (min-width: 769px) and (max-width: 900px) {
     padding: 100px 45px 0 45px;
+    margin-bottom: 9rem;
   }
 
   @media screen and (min-width: 501px) and (max-width: 768px) {
+    margin-bottom: 9rem;
     padding: 56px 58px 0 58px;
     .whyus-text {
       h2 {
@@ -56,6 +59,8 @@ const WhyUsStyles = styled.div`
 
   @media (max-width: 500px) {
     padding: 64px 24px 0 24px;
+    margin-bottom: 7.5rem;
+
     .whyus-background {
       height: 900px;
     }
