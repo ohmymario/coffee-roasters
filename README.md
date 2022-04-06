@@ -1,34 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Coffee Roasters
 
-## Getting Started
+Created with Next.js! This was a fun exercise using a professional design from Frontend Mentor. The design is provided in Figma and is recreated to be as near pixel-perfect as possible.
 
-First, run the development server:
+**Link to project:** https://coffee-roasters.vercel.app/
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+![desktop view of weatherman](https://drive.google.com/uc?export=view&id=1m45csQETTZetU1fMcFH7RiFSBLZRPTyP)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How It's Made:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+**Tech used:** Next.js, React, Styled-Components, Next Image, Javascript, Vercel Hosting
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Next.js was what I wanted to use as I am comfortable with React but wanted something super fast and works for my application, which was a static website.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Working off of a design had the perk of being able to know what the final product should look like so I can structure how I work off of that. My plan was to translate the design into components. When I finished a component I then moved onto another.
 
-## Learn More
+styled-components helped keep all styles "isolated" from one another. No conflicts 😁
 
-To learn more about Next.js, take a look at the following resources:
+Something I've never used before was Next Image. This sped was cool as it completely took care of image optimization. Implementing wasn't difficult as I imported an Image Component from Next.js, gave it my image and then the rest was handled for me.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Optimizations
+*(optional)*
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+If I had more time one issue that I could not fully fix was rendering different images depending on the viewport. The next image component takes one image and optimizes it for different viewports but changing the image entirely didn't seem to have an elegant solution.
 
-## Deploy on Vercel
+I made a custom modal for when a customer wants to check out but then noticed that the design changes from text within the button. I first tried this within CSS but couldn't get the desired result. So then I made a custom hook to track the width of the window. Now within the component I could show what I wanted at the correct width.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Lessons Learned:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+A pre-made design is something that I never had worked with and learning to make something pixel-perfect can be tricky. When tackling the CSS I made sure to allow the design to still remain responsive.
+
+I gained a lot of experience translating design to components and deciding how they may interact with each other and how they may function when others aren't present. If I come back to this project I also want to be confident that I can move code around with minimal maintenance to get it back up and running.
+
+## Examples:
+Take a look at these couple examples that I have in my own portfolio:
+
+**Pizza Site:** https://github.com/ohmymario/pizza-site
+
+**Pod Landing Page:** https://github.com/ohmymario/pod-landing-page
+
+**Color Palette:** https://github.com/ohmymario/Color-Palette
