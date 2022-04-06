@@ -4,7 +4,7 @@ Created with Next.js! This was a fun exercise using a professional design from F
 
 **Link to project:** https://coffee-roasters.vercel.app/
 
-![desktop view of Coffee Roasters](https://drive.google.com/uc?export=view&id=1m45csQETTZetU1fMcFH7RiFSBLZRPTyP)
+![desktop view of Coffee Roasters](demo/site_demo.gif)
 
 ## How It's Made:
 
